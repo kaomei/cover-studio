@@ -38,32 +38,51 @@
 
 ```mermaid
 flowchart TD
-    subgraph S0["⚙️ 초기 설정 (최초 1회)"]
-        A0["만능 커버 Skill 실행"] --> A1{"출력 모드 확인"}
-        A1 -->|"멀티 사이즈 모드"| A2["상시 출력할 독립 규격 조합 체크:<br/>3:4 / 2.35:1 / X 16:9 / X장문 5:2 / 영상 16:9 / GitHub 2:1 / 1:1"]
-        A1 -->|"단일 규격 모드"| A3["매번 단일 규격 개별 커스텀"]
+    classDef setupBox fill:#f0f7ff,stroke:#0284c7,stroke-width:2px,color:#0f172a,rx:10px,ry:10px;
+    classDef textBox fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,rx:10px,ry:10px;
+    classDef genBox fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#78350f,rx:10px,ry:10px;
+    classDef deliverBox fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,rx:10px,ry:10px;
+    classDef decision fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,rx:6px,ry:6px;
+    classDef action fill:#1e293b,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+
+    subgraph S0 ["⚙️ 0단계 · 초기 환경 설정 (최초 1회)"]
+        A0(["🚀 만능 커버 Skill 실행"]):::action
+        A1{"출력 모드 확인"}:::decision
+        A2["🌟 <b>통합 브랜드 멀티 규격 일괄 모드</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>상시 일괄 출력할 독립 규격 체크：<br/>• 📕 샤오홍슈 3:4<br/>• 🟢 위챗 2.35:1<br/>• 🐦 X 포스트 16:9 / 📰 X 아티클 5:2<br/>• 🎬 영상 16:9 / 💻 GitHub 2:1 / 🔲 1:1"]:::setupBox
+        A3["🎯 <b>단일 규격 커스텀 모드</b><br/>매번 지정 규격만 1개씩 단독 생성"]:::setupBox
+        A0 --> A1
+        A1 -->|"일괄 모드"| A2
+        A1 -->|"단일 모드"| A3
     end
 
-    subgraph S1["📝 1단계: 글 입력 및 텍스트 계층 확인"]
-        B0["글/대본 입력"] --> B1["3대 텍스트 계층 자동 추출 및 확인:<br/>1. 📌 메인 대형 헤드라인 훅<br/>2. 📝 서브 카피 가치 설명<br/>3. 🏷️ 캡슐 태그 및 체크리스트"]
+    subgraph S1 ["📝 1단계 · 글 입력 및 텍스트 계층 선행 확인"]
+        B0["📋 글 제목 / 핵심 아웃라인 / 대본 입력"]:::action
+        B1["✍️ <b>3대 텍스트 계층 자동 추출 및 확인</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>1️⃣ 📌 <b>메인 헤드라인</b>: 핵심 후킹 (≤6-8단어)<br/>2️⃣ 📝 <b>서브 카피</b>: 구체적 가치 설명 (10-15단어)<br/>3️⃣ 🏷️ <b>캡슐 태그 & 체크리스트</b>"]:::textBox
+        B0 --> B1
     end
 
-    subgraph S2["🎨 2단계: 3가지 스타일 즉시 생성"]
-        C0["사용자 텍스트 확인"] --> C1["확인된 텍스트로 3가지 스타일 이미지 즉시 생성:<br/>• 스타일 A: 사이버 긱 (punk-cover)<br/>• 스타일 B: 볼드 헤드라인 (atutun-xhs / ponyo)<br/>• 스타일 C: 심층 저널 (knowledge-media)"]
+    subgraph S2 ["🎨 2단계 · 3가지 스타일 즉시 동시 생성"]
+        C0["✅ 텍스트 설정 확인"]:::action
+        C1["🖼️ <b>확인된 텍스트로 3가지 스타일 이미지 즉시 생성</b><br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• <b>스타일 A · 사이버 긱</b> (punk-cover)<br/>• <b>스타일 B · 볼드 헤드라인</b> (atutun-xhs / ponyo)<br/>• <b>스타일 C · 심층 저널</b> (knowledge-media)"]:::genBox
+        C0 --> C1
     end
 
-    subgraph S3["🚀 3단계: 선택 및 자율 규격 최종 납품"]
-        D0["사용자가 마음에 드는 스타일 선택"] --> D1{"0단계 초기 설정"}
-        D1 -->|"멀티 사이즈 모드"| D2["체크한 전체 규격 일괄 출력:<br/>예: 3:4 + 2.35:1 + 16:9"]
-        D1 -->|"단일 규격 모드"| D3["지정 규격 개별 출력"]
-        D2 --> D4["Codex 직접 렌더링 또는 Google Flow 무료 가이드]
-        D3 --> D4
+    subgraph S3 ["🚀 3단계 · 선택 및 멀티 플랫폼 즉시 납품"]
+        D0{"선호 스타일 선택 (A / B / C)"}:::decision
+        D1["📦 <b>체크한 모든 규격 자산 일괄 생성</b><br/>(3:4 + 2.35:1 + 16:9 등)"]:::deliverBox
+        D2["🖼️ <b>선택한 1개 규격 자산 생성</b>"]:::deliverBox
+        D3["💻 <b>Codex 직접 렌더링 또는 Google Flow 무료 가이드</b>"]:::action
+
+        D0 -->|"멀티 규격 모드"| D1
+        D0 -->|"단일 규격 모드"| D2
+        D1 ==> D3
+        D2 ==> D3
     end
 
-    A2 --> B0
-    A3 --> B0
-    B1 --> C0
-    C1 --> D0
+    A2 ==> B0
+    A3 ==> B0
+    B1 ==> C0
+    C1 ==> D0
 ```
 
 ---
@@ -72,24 +91,31 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    CS["🎨 Cover Studio<br/>만능 커버 스튜디오"]
-    
-    CS --> S1["🌐 크로스 플랫폼 전능 흐름"]
-    S1 --> E1["punk-cover (사이버 긱 / 모던 테크 / 멀티 적응)"]
-    S1 --> E2["huashu-skills (기업 발표회 / 산업 디자인 / AI+HTML)"]
-    S1 --> E3["rn-cover-skill (5:2 에디토리얼 인포그래픽 / 엄격한 지식감)"]
+    classDef rootBox fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#ffffff,font-weight:bold,rx:8px,ry:8px;
+    classDef cat1 fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e3a8a,font-weight:bold,rx:6px,ry:6px;
+    classDef cat2 fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,font-weight:bold,rx:6px,ry:6px;
+    classDef cat3 fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,font-weight:bold,rx:6px,ry:6px;
+    classDef cat4 fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,font-weight:bold,rx:6px,ry:6px;
+    classDef leaf fill:#ffffff,stroke:#cbd5e1,stroke-width:1px,color:#334155,rx:4px,ry:4px;
 
-    CS --> S2["📕 샤오홍슈 3:4 세로형 버즈 흐름"]
-    S2 --> E4["atutun-xhs-cover (인물 등장 / 형광 볼드 텍스트 / 이모지)"]
-    S2 --> E5["gbro-cover-design (플랫 단색 / UI 카드 / 10종 구도)"]
-    S2 --> E6["ponyo-cover-anchor-system (감정 훅 / 통점 / 콜라주)"]
+    CS["🎨 Cover Studio<br/>만능 커버 스튜디오"]:::rootBox
 
-    CS --> S3["🟢 위챗 2.35:1 전용 흐름"]
-    S3 --> E7["knowledge-media-cover (아이보리 종이 / 붉은 태그 / 1:1 안전)"]
-    S3 --> E8["wechatcover (아트 디렉팅 폰트 레이아웃 / 깨짐 방지)"]
+    CS --> S1["🌐 크로스 플랫폼 전능 흐름"]:::cat1
+    S1 --> E1["punk-cover<br/><i>사이버 긱 · 멀티 적응</i>"]:::leaf
+    S1 --> E2["huashu-skills<br/><i>기업 발표회 · AI+HTML</i>"]:::leaf
+    S1 --> E3["rn-cover-skill<br/><i>5:2 에디토리얼 · 엄격한 지식</i>"]:::leaf
 
-    CS --> S4["🎬 영상/실습 도구 흐름"]
-    S4 --> E9["oil-cover (애플 미니멀 / Mac 창 / 키프레임 캡처)"]
+    CS --> S2["📕 샤오홍슈 3:4 세로형 버즈 흐름"]:::cat2
+    S2 --> E4["atutun-xhs-cover<br/><i>인물 등장 · 형광 볼드 · Emoji</i>"]:::leaf
+    S2 --> E5["gbro-cover-design<br/><i>플랫 단색 · UI 카드 · 10종</i>"]:::leaf
+    S2 --> E6["ponyo-cover-anchor-system<br/><i>감정 훅 · 찢은 종이 콜라주</i>"]:::leaf
+
+    CS --> S3["🟢 위챗 2.35:1 전용 흐름"]:::cat3
+    S3 --> E7["knowledge-media-cover<br/><i>아이보리 종이 · 1:1 안전</i>"]:::leaf
+    S3 --> E8["wechatcover<br/><i>아트 디렉팅 · 폰트 정렬</i>"]:::leaf
+
+    CS --> S4["🎬 영상/실습 도구 흐름"]:::cat4
+    S4 --> E9["oil-cover<br/><i>애플 미니멀 · Mac 창 · 캡처</i>"]:::leaf
 ```
 
 | 카테고리 | 엔진명 | GitHub 링크 | 주요 비주얼 특징 | 추천 사용처 |

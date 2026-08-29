@@ -40,32 +40,51 @@
 
 ```mermaid
 flowchart TD
-    subgraph S0["⚙️ 首次配置 (仅首次安装/唤醒时确认)"]
-        A0["用户安装 / 唤醒【万能封面 Skill】"] --> A1{"确认出图偏好模式"}
-        A1 -->|"统一品牌模式"| A2["自主勾选常驻批量输出尺寸:<br/>小红书 3:4 / 公众号 2.35:1 / X 16:9 / X长文 5:2 / 视频 16:9 / GitHub 2:1 / 1:1 方形"]
-        A1 -->|"单尺寸模式"| A3["每次按指定单尺寸单独定制"]
+    classDef setupBox fill:#f0f7ff,stroke:#0284c7,stroke-width:2px,color:#0f172a,rx:10px,ry:10px;
+    classDef textBox fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,rx:10px,ry:10px;
+    classDef genBox fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#78350f,rx:10px,ry:10px;
+    classDef deliverBox fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,rx:10px,ry:10px;
+    classDef decision fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,rx:6px,ry:6px;
+    classDef action fill:#1e293b,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+
+    subgraph S0 ["⚙️ 阶段 0 · 首次配置偏好 (一次性记忆)"]
+        A0(["🚀 唤醒【万能封面 Skill】"]):::action
+        A1{"选择出图模式"}:::decision
+        A2["🌟 <b>统一品牌多尺寸模式</b><br/>━━━━━━━━━━━━━━━<br/>自主勾选日常常驻画幅：<br/>• 📕 小红书 3:4<br/>• 🟢 微信公众号 2.35:1<br/>• 🐦 X 推文 16:9 / 📰 X 长文 5:2<br/>• 🎬 视频 16:9 / 💻 GitHub 2:1 / 🔲 1:1"]:::setupBox
+        A3["🎯 <b>单尺寸定制模式</b><br/>每次只针对当前指定单一尺寸出图"]:::setupBox
+        A0 --> A1
+        A1 -->|"选定批量"| A2
+        A1 -->|"选定单图"| A3
     end
 
-    subgraph S1["📝 阶段一：文章录入与文字层级核对 (每次必须)"]
-        B0["用户输入文章 / 标题 / 口播草稿"] --> B1["提取并与用户核对 3 大文字层级:<br/>1. 📌 大字主标题 (≤6-8字，高反差吸睛核心)<br/>2. 📝 副标题阐述 (10-15字，阐明具体价值)<br/>3. 🏷️ 小标签元素 (胶囊标签 / 勾选框 / 亮点词)"]
+    subgraph S1 ["📝 阶段 1 · 文章录入与文字层级核对 (每次必经)"]
+        B0["📋 输入文章标题 / 核心大纲 / 口播文案"]:::action
+        B1["✍️ <b>精准核对 3 大核心文字层级</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>1️⃣ 📌 <b>大字主标题</b>：核心吸睛痛点 (≤6-8字)<br/>2️⃣ 📝 <b>副标题阐述</b>：具体价值支撑 (10-15字)<br/>3️⃣ 🏷️ <b>小文字与标签</b>：胶囊标签 / 勾选亮点词"]:::textBox
+        B0 --> B1
     end
 
-    subgraph S2["🎨 阶段二：基于确认文字，直接并行出 3 种风格图 / Prompt"]
-        C0["用户确认文字内容"] --> C1["直接并行生成 3 套不同流派的高清成图 / 完整 Prompt:<br/>• 风格 A: 赛博极客 / 科技感 (基于 punk-cover)<br/>• 风格 B: 爆款干货 / 大字视觉锚点 (基于 atutun-xhs / ponyo)<br/>• 风格 C: 深度专栏 / 典雅知识流 (基于 knowledge-media)"]
+    subgraph S2 ["🎨 阶段 2 · 3 大流派直接并行出图 / 出 Prompt"]
+        C0["✅ 确认文字配置"]:::action
+        C1["🖼️ <b>直接并行生成 3 种完全不同流派方案</b><br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• <b>风格 A · 赛博极客流</b> (基于 punk-cover 理念)<br/>• <b>风格 B · 爆款大字流</b> (基于 atutun-xhs / ponyo 理念)<br/>• <b>风格 C · 深度专栏流</b> (基于 knowledge-media 理念)"]:::genBox
+        C0 --> C1
     end
 
-    subgraph S3["🚀 阶段三：用户挑选 ➔ 自选多尺寸一键批量交付"]
-        D0["用户选定心仪风格 (A / B / C)"] --> D1{"根据阶段 0 预设偏好"}
-        D1 -->|"统一品牌模式"| D2["一键批量交付全部已勾选尺寸资产:<br/>例如: 小红书 3:4 + 公众号 2.35:1 + X 16:9"]
-        D1 -->|"单尺寸模式"| D3["交付当前画幅专属版本"]
-        D2 --> D4["Codex 本地一键直出成图 OR 输出 Google Flow 免费出图指引"]
-        D3 --> D4
+    subgraph S3 ["🚀 阶段 3 · 选定心仪风格 ➔ 最终多端极速交付"]
+        D0{"用户选定心仪风格 (A / B / C)"}:::decision
+        D1["📦 <b>批量生成全部自选尺寸资产</b><br/>(小红书 3:4 + 公众号 2.35:1 + X 16:9 等)"]:::deliverBox
+        D2["🖼️ <b>生成当前单个画幅专属资产</b>"]:::deliverBox
+        D3["💻 <b>Codex 本地一键直出成图</b><br/>或 <b>Google Flow (Nano Banana) 免费秒级出图</b>"]:::action
+
+        D0 -->|"统一品牌模式"| D1
+        D0 -->|"单尺寸模式"| D2
+        D1 ==> D3
+        D2 ==> D3
     end
 
-    A2 --> B0
-    A3 --> B0
-    B1 --> C0
-    C1 --> D0
+    A2 ==> B0
+    A3 ==> B0
+    B1 ==> C0
+    C1 ==> D0
 ```
 
 ---
@@ -74,24 +93,31 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    CS["🎨 Cover Studio<br/>万能封面工作室"]
-    
-    CS --> S1["🌐 跨平台全能流"]
-    S1 --> E1["punk-cover (赛博极客 / 科技感 / 多端自适应)"]
-    S1 --> E2["huashu-skills (大厂发布会 / 工业级 / AI+HTML双路径)"]
-    S1 --> E3["rn-cover-skill (5:2 编辑图解风 / 严肃知识感)"]
+    classDef rootBox fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#ffffff,font-weight:bold,rx:8px,ry:8px;
+    classDef cat1 fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e3a8a,font-weight:bold,rx:6px,ry:6px;
+    classDef cat2 fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,font-weight:bold,rx:6px,ry:6px;
+    classDef cat3 fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,font-weight:bold,rx:6px,ry:6px;
+    classDef cat4 fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,font-weight:bold,rx:6px,ry:6px;
+    classDef leaf fill:#ffffff,stroke:#cbd5e1,stroke-width:1px,color:#334155,rx:4px,ry:4px;
 
-    CS --> S2["📕 小红书 3:4 爆款流"]
-    S2 --> E4["atutun-xhs-cover (真人出镜 / 荧光大字 / Emoji贴纸)"]
-    S2 --> E5["gbro-cover-design (扁平纯色 / UI卡片 / 10种构图)"]
-    S2 --> E6["ponyo-cover-anchor-system (视觉锚点 / 痛点钩子 / 撕纸拼贴)"]
+    CS["🎨 Cover Studio<br/>万能封面工作室"]:::rootBox
 
-    CS --> S3["🟢 微信公众号 2.35:1 专用流"]
-    S3 --> E7["knowledge-media-cover (暖象牙纸底 / 暗红标签 / 1:1 安全区)"]
-    S3 --> E8["wechatcover (艺术指导排版 / 品牌规则不乱码)"]
+    CS --> S1["🌐 跨平台全能流"]:::cat1
+    S1 --> E1["punk-cover<br/><i>赛博极客 · 多端自适应</i>"]:::leaf
+    S1 --> E2["huashu-skills<br/><i>大厂发布会 · AI+HTML</i>"]:::leaf
+    S1 --> E3["rn-cover-skill<br/><i>5:2 编辑图解 · 严肃知识</i>"]:::leaf
 
-    CS --> S4["🎬 视频与实操工具流"]
-    S4 --> E9["oil-cover (Apple极简 / Mac视窗 / 截取关键帧)"]
+    CS --> S2["📕 小红书 3:4 爆款流"]:::cat2
+    S2 --> E4["atutun-xhs-cover<br/><i>真人出镜 · 荧光大字 · Emoji</i>"]:::leaf
+    S2 --> E5["gbro-cover-design<br/><i>纯色扁平 · UI卡片 · 10构图</i>"]:::leaf
+    S2 --> E6["ponyo-cover-anchor-system<br/><i>视觉锚点 · 痛点钩子 · 撕纸拼贴</i>"]:::leaf
+
+    CS --> S3["🟢 微信公众号 2.35:1 专用流"]:::cat3
+    S3 --> E7["knowledge-media-cover<br/><i>暖象牙纸底 · 1:1 安全区</i>"]:::leaf
+    S3 --> E8["wechatcover<br/><i>艺术指导排版 · 品牌不乱码</i>"]:::leaf
+
+    CS --> S4["🎬 视频与实操工具流"]:::cat4
+    S4 --> E9["oil-cover<br/><i>Apple极简 · Mac视窗 · 录屏关键帧</i>"]:::leaf
 ```
 
 | 流派 | 引擎名 | GitHub 仓库 | 核心视觉特征 | 最佳适配场景 |

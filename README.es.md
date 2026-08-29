@@ -38,32 +38,51 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 
 ```mermaid
 flowchart TD
-    subgraph S0["⚙️ Fase 0: Preferencia y Selección de Tamaños (Única vez)"]
-        A0["Iniciar Skill Universal de Portadas"] --> A1{"Confirmar modo de salida"}
-        A1 -->|"Modo multiformato"| A2["Marcar combinación de tamaños deseados:<br/>3:4 / 2.35:1 / X 16:9 / X Art 5:2 / Video 16:9 / GitHub 2:1 / 1:1"]
-        A1 -->|"Modo individual"| A3["Personalización por tamaño individual"]
+    classDef setupBox fill:#f0f7ff,stroke:#0284c7,stroke-width:2px,color:#0f172a,rx:10px,ry:10px;
+    classDef textBox fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,rx:10px,ry:10px;
+    classDef genBox fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#78350f,rx:10px,ry:10px;
+    classDef deliverBox fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,rx:10px,ry:10px;
+    classDef decision fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,rx:6px,ry:6px;
+    classDef action fill:#1e293b,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+
+    subgraph S0 ["⚙️ Fase 0 · Preferencia Inicial (Única vez)"]
+        A0(["🚀 Iniciar Skill Universal de Portadas"]):::action
+        A1{"Confirmar modo de salida"}:::decision
+        A2["🌟 <b>Lote multiformato de marca unificada</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>Marcar combinación de tamaños deseados：<br/>• 📕 Xiaohongshu 3:4<br/>• 🟢 WeChat 2.35:1<br/>• 🐦 X Post 16:9 / 📰 X Art 5:2<br/>• 🎬 Video 16:9 / 💻 GitHub 2:1 / 🔲 1:1"]:::setupBox
+        A3["🎯 <b>Personalización por tamaño individual</b><br/>Diseño individual para 1 formato"]:::setupBox
+        A0 --> A1
+        A1 -->|"Modo lote"| A2
+        A1 -->|"Modo individual"| A3
     end
 
-    subgraph S1["📝 Fase 1: Texto y Alineación de Jerarquía"]
-        B0["Ingresar texto / guion"] --> B1["Extraer y alinear 3 niveles de texto:<br/>1. 📌 Titular grande de gancho<br/>2. 📝 Subtítulo de propuesta de valor<br/>3. 🏷️ Etiquetas tipo píldora"]
+    subgraph S1 ["📝 Fase 1 · Texto y Alineación de Jerarquía"]
+        B0["📋 Ingresar texto / guion / titular"]:::action
+        B1["✍️ <b>Alinear 3 niveles de texto</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>1️⃣ 📌 <b>Titular grande de gancho</b> (≤6-8 palabras)<br/>2️⃣ 📝 <b>Subtítulo de valor</b> (10-15 palabras)<br/>3️⃣ 🏷️ <b>Etiquetas tipo píldora & checklist</b>"]:::textBox
+        B0 --> B1
     end
 
-    subgraph S2["🎨 Fase 2: Generación Directa de 3 Diseños"]
-        C0["Usuario confirma texto"] --> C1["Generar directamente 3 imágenes / prompts:<br/>• Estilo A: Cyber Tech (punk-cover)<br/>• Estilo B: Gancho con gran texto (atutun-xhs / ponyo)<br/>• Estilo C: Editorial profundo (knowledge-media)"]
+    subgraph S2 ["🎨 Fase 2 · Generación Directa de 3 Diseños"]
+        C0["✅ Confirmar configuración de texto"]:::action
+        C1["🖼️ <b>Generar directamente 3 imágenes / prompts</b><br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• <b>Estilo A · Cyber Tech</b> (punk-cover)<br/>• <b>Estilo B · Gancho gran texto</b> (atutun-xhs / ponyo)<br/>• <b>Estilo C · Editorial profundo</b> (knowledge-media)"]:::genBox
+        C0 --> C1
     end
 
-    subgraph S3["🚀 Fase 3: Elección y Entrega en Tamaños Elegidos"]
-        D0["Usuario elige estilo (A / B / C)"] --> D1{"Ver preferencia de Fase 0"}
-        D1 -->|"Modo multiformato"| D2["Exportar lote de todos los formatos marcados:<br/>ej: 3:4 + 2.35:1 + 16:9"]
-        D1 -->|"Modo individual"| D3["Exportar tamaño seleccionado"]
-        D2 --> D4["Render directo en Codex O Guía gratuita en Google Flow"]
-        D3 --> D4
+    subgraph S3 ["🚀 Fase 3 · Elección y Entrega Multiplataforma"]
+        D0{"Usuario elige estilo (A / B / C)"}:::decision
+        D1["📦 <b>Exportar lote de todos los formatos marcados</b><br/>(3:4 + 2.35:1 + 16:9 etc.)"]:::deliverBox
+        D2["🖼️ <b>Exportar tamaño individual seleccionado</b>"]:::deliverBox
+        D3["💻 <b>Render directo en Codex O Guía Google Flow</b>"]:::action
+
+        D0 -->|"Modo multiformato"| D1
+        D0 -->|"Modo individual"| D2
+        D1 ==> D3
+        D2 ==> D3
     end
 
-    A2 --> B0
-    A3 --> B0
-    B1 --> C0
-    C1 --> D0
+    A2 ==> B0
+    A3 ==> B0
+    B1 ==> C0
+    C1 ==> D0
 ```
 
 ---
@@ -72,24 +91,31 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    CS["🎨 Cover Studio<br/>Estudio Universal de Portadas"]
-    
-    CS --> S1["🌐 Multiplataforma Universal"]
-    S1 --> E1["punk-cover (Cyberpunk / Tecnología / Multiformato)"]
-    S1 --> E2["huashu-skills (Lanzamiento / Industrial / IA+HTML)"]
-    S1 --> E3["rn-cover-skill (5:2 Infografía Editorial / Seriedad)"]
+    classDef rootBox fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#ffffff,font-weight:bold,rx:8px,ry:8px;
+    classDef cat1 fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e3a8a,font-weight:bold,rx:6px,ry:6px;
+    classDef cat2 fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,font-weight:bold,rx:6px,ry:6px;
+    classDef cat3 fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,font-weight:bold,rx:6px,ry:6px;
+    classDef cat4 fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,font-weight:bold,rx:6px,ry:6px;
+    classDef leaf fill:#ffffff,stroke:#cbd5e1,stroke-width:1px,color:#334155,rx:4px,ry:4px;
 
-    CS --> S2["📕 Xiaohongshu 3:4 Viral"]
-    S2 --> E4["atutun-xhs-cover (Persona Real / Texto Neón / Stickers)"]
-    S2 --> E5["gbro-cover-design (Plano Limpio / Tarjetas UI / 10 Diseños)"]
-    S2 --> E6["ponyo-cover-anchor-system (Anclaje Emocional / Collage)"]
+    CS["🎨 Cover Studio<br/>Estudio Universal de Portadas"]:::rootBox
 
-    CS --> S3["🟢 WeChat 2.35:1 Exclusivo"]
-    S3 --> E7["knowledge-media-cover (Papel Marfil / Etiqueta Roja / 1:1 Seguro)"]
-    S3 --> E8["wechatcover (Tipografía Art Director / Sin deformación)"]
+    CS --> S1["🌐 Multiplataforma Universal"]:::cat1
+    S1 --> E1["punk-cover<br/><i>Cyberpunk · Multiformato</i>"]:::leaf
+    S1 --> E2["huashu-skills<br/><i>Lanzamiento · IA+HTML</i>"]:::leaf
+    S1 --> E3["rn-cover-skill<br/><i>5:2 Infografía Editorial</i>"]:::leaf
 
-    CS --> S4["🎬 Video y Tutoriales"]
-    S4 --> E9["oil-cover (Apple Minimal / Ventana Mac / Keyframes)"]
+    CS --> S2["📕 Xiaohongshu 3:4 Viral"]:::cat2
+    S2 --> E4["atutun-xhs-cover<br/><i>Persona Real · Texto Neón · Emoji</i>"]:::leaf
+    S2 --> E5["gbro-cover-design<br/><i>Plano Limpio · UI · 10 Diseños</i>"]:::leaf
+    S2 --> E6["ponyo-cover-anchor-system<br/><i>Anclaje Emocional · Collage</i>"]:::leaf
+
+    CS --> S3["🟢 WeChat 2.35:1 Exclusivo"]:::cat3
+    S3 --> E7["knowledge-media-cover<br/><i>Papel Marfil · 1:1 Seguro</i>"]:::leaf
+    S3 --> E8["wechatcover<br/><i>Tipografía Art Director</i>"]:::leaf
+
+    CS --> S4["🎬 Video y Tutoriales"]:::cat4
+    S4 --> E9["oil-cover<br/><i>Apple Minimal · Mac · Keyframes</i>"]:::leaf
 ```
 
 | Corriente | Nombre del Motor | Repositorio GitHub | Características Visuales | Uso Recomendado |

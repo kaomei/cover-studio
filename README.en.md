@@ -40,32 +40,51 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 
 ```mermaid
 flowchart TD
-    subgraph S0["⚙️ First-Run Setup (One-time)"]
-        A0["Install / Wake Universal Cover Skill"] --> A1{"Confirm Output Mode Preference"}
-        A1 -->|"Multi-size Mode"| A2["User Checks Discrete Aspect Ratio Options:<br/>XHS 3:4 / WeChat 2.35:1 / X Post 16:9 / X Article 5:2 / Video 16:9 / GitHub 2:1 / 1:1"]
-        A1 -->|"Single-size Mode"| A3["Custom design for single platform each time"]
+    classDef setupBox fill:#f0f7ff,stroke:#0284c7,stroke-width:2px,color:#0f172a,rx:10px,ry:10px;
+    classDef textBox fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,rx:10px,ry:10px;
+    classDef genBox fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#78350f,rx:10px,ry:10px;
+    classDef deliverBox fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,rx:10px,ry:10px;
+    classDef decision fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,rx:6px,ry:6px;
+    classDef action fill:#1e293b,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+
+    subgraph S0 ["⚙️ Phase 0 · Initial Preference Setup (One-time)"]
+        A0(["🚀 Wake Universal Cover Skill"]):::action
+        A1{"Select Output Mode"}:::decision
+        A2["🌟 <b>Unified Brand Batch Mode</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>Select recurring platform ratios:<br/>• 📕 XHS 3:4<br/>• 🟢 WeChat 2.35:1<br/>• 🐦 X Post 16:9 / 📰 X Article 5:2<br/>• 🎬 Video 16:9 / 💻 GitHub 2:1 / 🔲 1:1"]:::setupBox
+        A3["🎯 <b>Single-size Custom Mode</b><br/>Design custom style for 1 specific size each time"]:::setupBox
+        A0 --> A1
+        A1 -->|"Batch Mode"| A2
+        A1 -->|"Single Mode"| A3
     end
 
-    subgraph S1["📝 Phase 1: Input & Text Hierarchy Alignment"]
-        B0["Input Article / Title / Script"] --> B1["Skill Extracts & Aligns 3 Text Tiers:<br/>1. 📌 Main Headline Hook<br/>2. 📝 Sub-headline Value Prop<br/>3. 🏷️ Pill Badges & Checklist Tags"]
+    subgraph S1 ["📝 Phase 1 · Input & Mandatory Text Hierarchy Alignment"]
+        B0["📋 Input Article Title / Outline / Script"]:::action
+        B1["✍️ <b>Align 3 Essential Text Tiers</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>1️⃣ 📌 <b>Main Headline</b>: Core eye-catching hook (≤6-8 words)<br/>2️⃣ 📝 <b>Sub-headline</b>: Concrete value prop (10-15 words)<br/>3️⃣ 🏷️ <b>Pill Badges & Tags</b>: Tags, stickers & checklists"]:::textBox
+        B0 --> B1
     end
 
-    subgraph S2["🎨 Phase 2: Direct 3-Style Image / Prompt Generation"]
-        C0["User Confirms Text"] --> C1["Directly Produce 3 Distinct Results / Prompts:<br/>• Style A: Cyber Tech / Geek (punk-cover)<br/>• Style B: Viral Big-Text Hook (atutun-xhs / ponyo)<br/>• Style C: Deep Editorial (knowledge-media)"]
+    subgraph S2 ["🎨 Phase 2 · Direct 3-Style Image / Prompt Generation"]
+        C0["✅ Confirm Text Configuration"]:::action
+        C1["🖼️ <b>Directly produce 3 distinct visual streams</b><br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• <b>Style A · Cyber Geek</b> (punk-cover concept)<br/>• <b>Style B · Viral Big-Text</b> (atutun-xhs / ponyo concept)<br/>• <b>Style C · Deep Editorial</b> (knowledge-media concept)"]:::genBox
+        C0 --> C1
     end
 
-    subgraph S3["🚀 Phase 3: Pick & Multi-Platform Final Delivery"]
-        D0["User Picks Favorite (A / B / C)"] --> D1{"Check Phase 0 Preference"}
-        D1 -->|"Multi-size Mode"| D2["Batch Export Full User-Selected Ratios:<br/>e.g. XHS 3:4 + WeChat 2.35:1 + X 16:9"]
-        D1 -->|"Single-size Mode"| D3["Export Custom Size Asset"]
-        D2 --> D4["Codex In-Tool Direct Render OR Free Google Flow Guide"]
-        D3 --> D4
+    subgraph S3 ["🚀 Phase 3 · Pick Favorite ➔ Rapid Multi-Ratio Export"]
+        D0{"User Picks Favorite Style (A / B / C)"}:::decision
+        D1["📦 <b>Batch generate all selected ratio assets</b><br/>(XHS 3:4 + WeChat 2.35:1 + X 16:9 etc.)"]:::deliverBox
+        D2["🖼️ <b>Generate single customized ratio asset</b>"]:::deliverBox
+        D3["💻 <b>Codex in-tool direct render</b><br/>or <b>Google Flow (Nano Banana) free fast gen</b>"]:::action
+
+        D0 -->|"Unified Brand Mode"| D1
+        D0 -->|"Single Size Mode"| D2
+        D1 ==> D3
+        D2 ==> D3
     end
 
-    A2 --> B0
-    A3 --> B0
-    B1 --> C0
-    C1 --> D0
+    A2 ==> B0
+    A3 ==> B0
+    B1 ==> C0
+    C1 ==> D0
 ```
 
 ---
@@ -74,24 +93,31 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    CS["🎨 Cover Studio<br/>Universal Cover Workflow"]
-    
-    CS --> S1["🌐 Cross-Platform Universal"]
-    S1 --> E1["punk-cover (Cyberpunk / Modern Tech / Multi-Ratio)"]
-    S1 --> E2["huashu-skills (Enterprise Launch / Industrial / AI+HTML)"]
-    S1 --> E3["rn-cover-skill (5:2 Editorial Infographic / Bold Typography)"]
+    classDef rootBox fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#ffffff,font-weight:bold,rx:8px,ry:8px;
+    classDef cat1 fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e3a8a,font-weight:bold,rx:6px,ry:6px;
+    classDef cat2 fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,font-weight:bold,rx:6px,ry:6px;
+    classDef cat3 fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,font-weight:bold,rx:6px,ry:6px;
+    classDef cat4 fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,font-weight:bold,rx:6px,ry:6px;
+    classDef leaf fill:#ffffff,stroke:#cbd5e1,stroke-width:1px,color:#334155,rx:4px,ry:4px;
 
-    CS --> S2["📕 Xiaohongshu 3:4 Viral"]
-    S2 --> E4["atutun-xhs-cover (Presenter / Neon Bold Text / Emoji)"]
-    S2 --> E5["gbro-cover-design (Clean Flat / UI Cards / 10 Layouts)"]
-    S2 --> E6["ponyo-cover-anchor-system (Emotional Anchor / Hooks / Collage)"]
+    CS["🎨 Cover Studio<br/>Universal Cover Workflow"]:::rootBox
 
-    CS --> S3["🟢 WeChat 2.35:1 Brand"]
-    S3 --> E7["knowledge-media-cover (Ivory Paper / Crimson Tag / 1:1 Safe)"]
-    S3 --> E8["wechatcover (Art Direction Typography / Brand Rules)"]
+    CS --> S1["🌐 Cross-Platform Universal"]:::cat1
+    S1 --> E1["punk-cover<br/><i>Cyber Geek · Multi-Ratio Adaptive</i>"]:::leaf
+    S1 --> E2["huashu-skills<br/><i>Enterprise Launch · AI+HTML</i>"]:::leaf
+    S1 --> E3["rn-cover-skill<br/><i>5:2 Editorial Infographic · Seriousness</i>"]:::leaf
 
-    CS --> S4["🎬 Video & Tutorial Stream"]
-    S4 --> E9["oil-cover (Apple Minimalist / Mac Window / Keyframes)"]
+    CS --> S2["📕 Xiaohongshu 3:4 Viral"]:::cat2
+    S2 --> E4["atutun-xhs-cover<br/><i>Presenter · Neon Bold · Emoji</i>"]:::leaf
+    S2 --> E5["gbro-cover-design<br/><i>Clean Flat · UI Cards · 10 Layouts</i>"]:::leaf
+    S2 --> E6["ponyo-cover-anchor-system<br/><i>Visual Anchor · Hooks · Collage</i>"]:::leaf
+
+    CS --> S3["🟢 WeChat 2.35:1 Brand"]:::cat3
+    S3 --> E7["knowledge-media-cover<br/><i>Ivory Paper · 1:1 Safe Zone</i>"]:::leaf
+    S3 --> E8["wechatcover<br/><i>Art Direction Typography · Brand VI</i>"]:::leaf
+
+    CS --> S4["🎬 Video & Tutorial Stream"]:::cat4
+    S4 --> E9["oil-cover<br/><i>Apple Minimal · Mac Window · Keyframe</i>"]:::leaf
 ```
 
 | Stream | Engine Name | GitHub Repo | Visual Characteristics | Best Suited For |
