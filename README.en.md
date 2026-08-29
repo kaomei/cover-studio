@@ -2,15 +2,15 @@
 
 [简体中文](README.md) · [**English**](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
-# 🎨 Cover Studio
+# 🎨 Universal Cover Skill (Cover Studio)
 
 ### All-in-One Viral Cover Design Workflow · Integrated with 9 Top Open-Source Cover Engines
 
-An open-source AI Skill designed for creators, developers, writers, and tech bloggers. Solves cover choice paralysis! Configures your **custom platform size bundle** on first install, **first aligns headline & sub-element text hierarchy**, and **directly generates 3 distinct style images or prompts simultaneously**. Supports one-click Brand System locking, **Codex in-tool generation**, and **Nano Banana (Google Flow free platform) prompt delivery**.
+An open-source AI Skill designed for creators, developers, writers, and tech bloggers. Solves cover choice paralysis! Configures your **clearly separated platform size bundle** upon installing Universal Cover Skill, **first aligns headline & sub-element text hierarchy**, and **directly generates 3 distinct style images or prompts simultaneously**. Supports one-click Brand System locking, **Codex in-tool generation**, and **Nano Banana (Google Flow free platform) prompt delivery**.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9 Open-Source Engines](https://img.shields.io/badge/Engines-9%20Top%20Open--Source%20Skills-0066ff?style=flat-square)
-![Custom Ratios](https://img.shields.io/badge/Custom%20Ratios-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9-f59e0b?style=flat-square)
+![Discrete Ratios](https://img.shields.io/badge/Ratios-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9%20%7C%205%3A2-f59e0b?style=flat-square)
 ![Free Image Gen](https://img.shields.io/badge/Generation-Codex%20Direct%20%7C%20Nano%20Banana%20Free-8b5cf6?style=flat-square)
 ![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)
 
@@ -24,7 +24,7 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 
 ## ✨ Key Features
 
-- ⚙️ **Custom Platform Size Bundle Setup**: Select exactly which platform aspect ratios you need for recurring batch output (e.g. XHS 3:4, WeChat 2.35:1, X 16:9, Video 16:9, GitHub 2:1).
+- ⚙️ **Discrete Platform Size Bundle Setup**: Select distinct individual platform ratios for recurring batch output (e.g. XHS `3:4`, WeChat `2.35:1`, X Post `16:9`, X Article `5:2`, Video `16:9`, GitHub `2:1`, Square `1:1`).
 - ✍️ **Text Hierarchy First Alignment**: Clarifies the exact wording for **Main Headline Hook**, **Sub-headline**, and **Pill Badges / Tags** before generating artwork.
 - 🖼️ **Direct 3-Style Generation**: Directly generates 3 fully rendered images or ready-to-run prompts across distinct visual streams simultaneously.
 - 🏷️ **One-Click Brand System Locking**: Lock your chosen style as your persistent brand VI so readers recognize your content across platforms.
@@ -41,8 +41,8 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 ```mermaid
 flowchart TD
     subgraph S0["⚙️ First-Run Setup (One-time)"]
-        A0[Install / Wake Skill] --> A1[Confirm Output Mode Preference:<br/>• Mode 1: 🌟 Multi-size Unified Brand Batch Mode<br/>• Mode 2: 🎯 Single-size Custom Mode]
-        A1 -->|Mode 1 Chosen| A2[User Checks Desired Aspect Ratio Bundle:<br/>XHS 3:4 / WeChat 2.35:1 / X 16:9 / Video 16:9 / GitHub 2:1]
+        A0[Install / Wake Universal Cover Skill] --> A1[Confirm Output Mode Preference:<br/>• Mode 1: 🌟 Multi-size Unified Brand Batch Mode<br/>• Mode 2: 🎯 Single-size Custom Mode]
+        A1 -->|Mode 1 Chosen| A2[User Checks Discrete Aspect Ratio Options:<br/>XHS 3:4 / WeChat 2.35:1 / X Post 16:9 / X Article 5:2 / Video 16:9 / GitHub 2:1 / 1:1]
     end
 
     subgraph S1["📝 Phase 1: Input & Text Hierarchy Alignment"]
@@ -70,7 +70,7 @@ flowchart TD
 
 | Stream | Engine Name | GitHub Repo | Visual Characteristics | Best Suited For |
 |:---|:---|:---|:---|:---|
-| **🌐 Cross-Platform** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | Cyberpunk / Modern Tech / Virtual Avatars | 3:4, 2.35:1, 5:2 multi-ratio adaptive |
+| **🌐 Cross-Platform** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | Cyberpunk / Modern Tech / Virtual Avatars | 3:4, 2.35:1, 16:9, 5:2 multi-ratio adaptive |
 | **🌐 Cross-Platform** | `huashu-skills` | [alchaincyf/huashu-skills](https://github.com/alchaincyf/huashu-skills) | Enterprise Launch / Industrial Design / Tokens | AI Gen + HTML Vector Rendering |
 | **🌐 Cross-Platform** | `rn-cover-skill` | [Pluviobyte/rnskill](https://github.com/Pluviobyte/rnskill) | 5:2 Editorial Infographic / Bold Typography | Deep tech breakdowns, research reports |
 | **📕 XHS 3:4** | `atutun-xhs-cover` | [panggungunvibe/atutun-xhs-cover](https://github.com/panggungunvibe/atutun-xhs-cover) | Presenter / Neon Bold Text / Checkbox Stickers | Creator branding, side hustle, actionable guides |

@@ -2,15 +2,15 @@
 
 [简体中文](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [**한국어**](README.ko.md) · [Español](README.es.md)
 
-# 🎨 Cover Studio (만능 커버 스튜디오)
+# 🎨 만능 커버 Skill (Cover Studio)
 
 ### 올인원 멀티 플랫폼 썸네일 & 커버 워크플로우 · 9대 최고 오픈소스 커버 엔진 통합
 
-크리에이터, 1인 개발자, 테크 블로거를 위한 오픈소스 AI Skill. 초기 설정에서 **원하는 플랫폼 규격 조합을 직접 체크**하고, 글 입력 시 **메인 헤드라인·서브 카피·태그 요소의 텍스트 계층을 먼저 확인**. 정렬된 문구를 바탕으로 **서로 다른 3가지 스타일 이미지를 즉시 생성·제시**합니다. 브랜드 시스템(Brand System) 고정은 물론, **Codex 환경 직접 생성**과 **Nano Banana (Google Flow 무료 플랫폼) 프롬프트 출력**의 듀얼 패스를 지원합니다.
+크리에이터, 1인 개발자, 테크 블로거를 위한 오픈소스 AI Skill. 초기 설정에서 **명확히 구분된 플랫폼 규격 목록을 직접 체크**하고, 글 입력 시 **메인 헤드라인·서브 카피·태그 요소의 텍스트 계층을 먼저 확인**. 정렬된 문구를 바탕으로 **서로 다른 3가지 스타일 이미지를 즉시 생성·제시**합니다. 브랜드 시스템(Brand System) 고정은 물론, **Codex 환경 직접 생성**과 **Nano Banana (Google Flow 무료 플랫폼) 프롬프트 출력**의 듀얼 패스를 지원합니다.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9대 오픈소스 엔진](https://img.shields.io/badge/통합%20엔진-9대%20오픈소스%20Skill-0066ff?style=flat-square)
-![자율 선택 규격](https://img.shields.io/badge/자율%20선택-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9-f59e0b?style=flat-square)
+![개별 규격 선택](https://img.shields.io/badge/자율%20선택-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9%20%7C%205%3A2-f59e0b?style=flat-square)
 ![무료 생성 지원](https://img.shields.io/badge/생성%20방식-Codex%20직출%20%7C%20Nano%20Banana%20무료-8b5cf6?style=flat-square)
 ![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)
 
@@ -24,7 +24,7 @@
 
 ## ✨ 핵심 기능
 
-- ⚙️ **사용자 맞춤형 규격 조합 설정**: 상시 일괄 출력할 플랫폼 비율(샤오홍슈 3:4, 위챗 2.35:1, X 16:9, 영상 16:9, GitHub 2:1 등)을 사용자가 직접 체크하여 영구 저장.
+- ⚙️ **명확한 플랫폼 규격 조합 설정**: 상시 일괄 출력할 개별 플랫폼 비율(샤오홍슈 `3:4`, 위챗 `2.35:1`, X 포스트 `16:9`, X 아티클 `5:2`, 영상 `16:9`, GitHub `2:1`, `1:1` 정사각 등)을 사용자가 직접 체크하여 저장.
 - ✍️ **텍스트 계층 선행 확인**: 메인 대형 텍스트, 서브 카피, 캡슐 태그 문구를 이미지 생성 전에 미리 완벽하게 정렬.
 - 🖼️ **3가지 스타일 즉시 생성**: 정렬된 텍스트를 바탕으로 3가지 서로 다른 고품질 완성작/프롬프트를 즉시 제시.
 - 🏷️ **원클릭 브랜드 시스템(Brand System) 고정**: 마음에 드는 스타일을 브랜드 표준으로 저장.
@@ -39,8 +39,8 @@
 ```mermaid
 flowchart TD
     subgraph S0["⚙️ 초기 설정 (최초 1회)"]
-        A0[Skill 실행] --> A1[출력 모드 확인:<br/>• 모드 1: 🌟 통합 브랜드 멀티 사이즈 일괄 출력<br/>• 모드 2: 🎯 단일 규격 개별 커스텀]
-        A1 -->|모드 1 선택 시| A2[상시 출력할 플랫폼 규격 조합 체크:<br/>3:4 / 2.35:1 / 16:9 / 영상 16:9 / GitHub 2:1]
+        A0[만능 커버 Skill 실행] --> A1[출력 모드 확인:<br/>• 모드 1: 🌟 통합 브랜드 멀티 사이즈 일괄 출력<br/>• 모드 2: 🎯 단일 규격 개별 커스텀]
+        A1 -->|모드 1 선택 시| A2[상시 출력할 독립 규격 조합 체크:<br/>3:4 / 2.35:1 / X 16:9 / X장문 5:2 / 영상 16:9 / GitHub 2:1 / 1:1]
     end
 
     subgraph S1["📝 1단계: 글 입력 및 텍스트 계층 확인"]
@@ -68,7 +68,7 @@ flowchart TD
 
 | 카테고리 | 엔진명 | GitHub 링크 | 주요 비주얼 특징 | 추천 사용처 |
 |:---|:---|:---|:---|:---|
-| **🌐 크로스 플랫폼** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | 사이버 긱 / 모던 테크풍 | 3:4, 2.35:1, 5:2 자동 적응 |
+| **🌐 크로스 플랫폼** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | 사이버 긱 / 모던 테크풍 | 3:4, 2.35:1, 16:9, 5:2 자동 적응 |
 | **🌐 크로스 플랫폼** | `huashu-skills` | [alchaincyf/huashu-skills](https://github.com/alchaincyf/huashu-skills) | 기업 발표회 / 산업 디자인 | AI 생성 ＋ HTML 벡터 렌더링 |
 | **🌐 크로스 플랫폼** | `rn-cover-skill` | [Pluviobyte/rnskill](https://github.com/Pluviobyte/rnskill) | 5:2 에디토리얼 인포그래픽 | 전문 기술 분석, 리서치 보고서 |
 | **📕 세로형 3:4** | `atutun-xhs-cover` | [panggungunvibe/atutun-xhs-cover](https://github.com/panggungunvibe/atutun-xhs-cover) | 인물 등장 / 형광 볼드 텍스트 / 이모지 | 1인 브랜딩, 노하우 팁 공유 |

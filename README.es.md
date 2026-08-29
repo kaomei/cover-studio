@@ -2,15 +2,15 @@
 
 [简体中文](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [**Español**](README.es.md)
 
-# 🎨 Cover Studio (Estudio Universal de Portadas)
+# 🎨 Skill Universal de Portadas (Cover Studio)
 
 ### Flujo de Trabajo Todo en Uno para Portadas Virales · Integrado con 9 Motores de Código Abierto
 
-Un Skill de IA de código abierto para creadores, desarrolladores y redactores. ¡Elimina la parálisis de elección! Permite **seleccionar tu combinación personalizada de tamaños** en la instalación, **primero alinea la jerarquía de texto (titular grande + subtítulo + etiquetas)** y luego **genera directamente 3 conceptos de diseño en imagen o prompts simultáneamente**. Soporta fijación de Sistema de Marca (Brand System), **generación directa en Codex** y **prompts optimizados para Nano Banana (Google Flow gratis)**.
+Un Skill de IA de código abierto para creadores, desarrolladores y redactores. ¡Elimina la parálisis de elección! Permite **seleccionar tu lista de tamaños individuales bien diferenciados** en la instalación del Skill Universal de Portadas, **primero alinea la jerarquía de texto (titular grande + subtítulo + etiquetas)** y luego **genera directamente 3 conceptos de diseño en imagen o prompts simultáneamente**. Soporta fijación de Sistema de Marca (Brand System), **generación directa en Codex** y **prompts optimizados para Nano Banana (Google Flow gratis)**.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9 Motores](https://img.shields.io/badge/Motores-9%20Skills%20Top%20Open--Source-0066ff?style=flat-square)
-![Tamaños Personalizados](https://img.shields.io/badge/Tamaños%20Elegidos-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9-f59e0b?style=flat-square)
+![Formatos Claros](https://img.shields.io/badge/Tamaños%20Elegidos-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9%20%7C%205%3A2-f59e0b?style=flat-square)
 ![Generación Gratuita](https://img.shields.io/badge/Generación-Codex%20Directo%20%7C%20Nano%20Banana%20Gratis-8b5cf6?style=flat-square)
 ![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)
 
@@ -24,7 +24,7 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 
 ## ✨ Características Principales
 
-- ⚙️ **Configuración Inicial de Tamaños Personalizados**: Marca exactamente qué formatos de plataforma necesitas en lote (Xiaohongshu 3:4, WeChat 2.35:1, X 16:9, Video 16:9, GitHub 2:1, etc.).
+- ⚙️ **Configuración Inicial de Tamaños Diferenciados**: Marca exactamente qué formatos de plataforma necesitas en lote por separado (Xiaohongshu `3:4`, WeChat `2.35:1`, X Post `16:9`, X Artículo `5:2`, Video `16:9`, GitHub `2:1`, Cuadrado `1:1`, etc.).
 - ✍️ **Alineación Previa de Jerarquía de Texto**: Confirma el titular principal grande, subtítulo y etiquetas antes de generar las imágenes.
 - 🖼️ **Generación Directa de 3 Estilos**: Produce 3 opciones completas con la tipografía alineada de forma simultánea.
 - 🏷️ **Fijación de Sistema de Marca (Brand System)**: Guarda tu estilo elegido para mantener coherencia en todas las publicaciones.
@@ -39,8 +39,8 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 ```mermaid
 flowchart TD
     subgraph S0["⚙️ Fase 0: Preferencia y Selección de Tamaños (Única vez)"]
-        A0[Iniciar Skill] --> A1[Confirmar modo de salida:<br/>• Modo 1: 🌟 Lote multiformato de marca unificada<br/>• Modo 2: 🎯 Personalización por tamaño individual]
-        A1 -->|Si elige Modo 1| A2[Marcar combinación de tamaños deseados:<br/>3:4 / 2.35:1 / 16:9 / Video 16:9 / GitHub 2:1]
+        A0[Iniciar Skill Universal de Portadas] --> A1[Confirmar modo de salida:<br/>• Modo 1: 🌟 Lote multiformato de marca unificada<br/>• Modo 2: 🎯 Personalización por tamaño individual]
+        A1 -->|Si elige Modo 1| A2[Marcar combinación de tamaños deseados:<br/>3:4 / 2.35:1 / X 16:9 / X Art 5:2 / Video 16:9 / GitHub 2:1 / 1:1]
     end
 
     subgraph S1["📝 Fase 1: Texto y Alineación de Jerarquía"]
@@ -68,7 +68,7 @@ flowchart TD
 
 | Corriente | Nombre del Motor | Repositorio GitHub | Características Visuales | Uso Recomendado |
 |:---|:---|:---|:---|:---|
-| **🌐 Multiplataforma** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | Cyberpunk / Tecnología Moderna | Adaptable a 3:4, 2.35:1, 5:2 |
+| **🌐 Multiplataforma** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | Cyberpunk / Tecnología Moderna | Adaptable a 3:4, 2.35:1, 16:9, 5:2 |
 | **🌐 Multiplataforma** | `huashu-skills` | [alchaincyf/huashu-skills](https://github.com/alchaincyf/huashu-skills) | Lanzamiento Empresarial / Diseño Industrial | IA + Renderizado Vectorial HTML |
 | **🌐 Multiplataforma** | `rn-cover-skill` | [Pluviobyte/rnskill](https://github.com/Pluviobyte/rnskill) | Infografía Editorial 5:2 | Análisis técnico, reportes de investigación |
 | **📕 Vertical 3:4** | `atutun-xhs-cover` | [panggungunvibe/atutun-xhs-cover](https://github.com/panggungunvibe/atutun-xhs-cover) | Persona Real / Texto Amarillo Neón / Stickers | Marca personal, guías prácticas |

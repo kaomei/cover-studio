@@ -2,15 +2,15 @@
 
 [简体中文](README.md) · [English](README.en.md) · [**日本語**](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md)
 
-# 🎨 Cover Studio (万能カバー画像スタジオ)
+# 🎨 万能カバー画像 Skill (Cover Studio)
 
 ### 全プラットフォーム対応・バズるカバー画像制作ワークフロー · 9大トップオープンソースエンジンを統合
 
-クリエイター、個人開発者、テックブロガーのためのオープンソース AI Skill。初期設定で**出力したいサイズ組み合わせを自由に選択**し、記事入力時に**大見出し・副見出し・タグ要素の文字階層をまず確認**。その文字を基に**3種類の異なるデザイン画像を直接生成・提示**します。ブランドシステム固定化機能に加え、**Codex 環境直接生成**と **Nano Banana (Google Flow 無料) プロンプト出力**に対応。
+クリエイター、個人開発者、テックブロガーのためのオープンソース AI Skill。初期設定で**明確に区分されたサイズ組み合わせを自由に選択**し、記事入力時に**大見出し・副見出し・タグ要素の文字階層をまず確認**。その文字を基に**3種類の異なるデザイン画像を直接生成・提示**します。ブランドシステム固定化機能に加え、**Codex 環境直接生成**と **Nano Banana (Google Flow 無料) プロンプト出力**に対応。
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9大オープンソースエンジン](https://img.shields.io/badge/統合エンジン-9大オープンソースSkill-0066ff?style=flat-square)
-![カスタムサイズ](https://img.shields.io/badge/自選サイズ-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9-f59e0b?style=flat-square)
+![個別指定サイズ](https://img.shields.io/badge/自選サイズ-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9%20%7C%205%3A2-f59e0b?style=flat-square)
 ![画像生成対応](https://img.shields.io/badge/生成方式-Codex直出%20%7C%20Nano%20Banana無料-8b5cf6?style=flat-square)
 ![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)
 
@@ -24,7 +24,7 @@
 
 ## ✨ 主な特徴
 
-- ⚙️ **初回カスタムサイズ選択**：常時一括出力したいプラットフォームサイズ（RED 3:4、WeChat 2.35:1、X 16:9、動画 16:9、GitHub 2:1等）をユーザー自身が事前にチェック設定。
+- ⚙️ **初回明確なカスタムサイズ選択**：常時一括出力したいプラットフォームサイズ（RED 3:4、WeChat 2.35:1、X ポスト 16:9、X 長文 5:2、動画 16:9、GitHub 2:1、1:1 正方形等）をユーザー自身が個別にチェック設定。
 - ✍️ **文字階層の先行確認ステップ**：大見出し、副見出し、タグ要素の文言を画像生成前に必ずユーザーと擦り合わせ。
 - 🖼️ **3パターン直接生成**：確認された文字を基に、異なる3つの高品質デザイン画像を直接生成・提示。
 - 🏷️ **ワンクリック・ブランドシステム固定**：気に入ったスタイルをブランド標準として保存。
@@ -39,8 +39,8 @@
 ```mermaid
 flowchart TD
     subgraph S0["⚙️ 初期設定 (初回のみ)"]
-        A0[Skill起動] --> A1[出力モード確認:<br/>• モード 1: 🌟 ブランド統一マルチサイズ一括出力<br/>• モード 2: 🎯 単一サイズ個別カスタム]
-        A1 -->|モード 1 選択時| A2[出力したいサイズ組み合わせをチェック:<br/>3:4 / 2.35:1 / 16:9 / 動画16:9 / GitHub 2:1]
+        A0[万能カバー画像 Skill 起動] --> A1[出力モード確認:<br/>• モード 1: 🌟 ブランド統一マルチサイズ一括出力<br/>• モード 2: 🎯 単一サイズ個別カスタム]
+        A1 -->|モード 1 選択時| A2[出力したい独立サイズをチェック:<br/>3:4 / 2.35:1 / X 16:9 / X長文 5:2 / 動画 16:9 / GitHub 2:1 / 1:1]
     end
 
     subgraph S1["📝 フェーズ1: 記事入力と文字階層確認"]
@@ -68,7 +68,7 @@ flowchart TD
 
 | 流派 | エンジン名 | GitHub リンク | ビジュアル特徴 | 適用シーン |
 |:---|:---|:---|:---|:---|
-| **🌐 クロスプラットフォーム** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | サイバーギーク / 現代テック風 | 3:4、2.35:1、5:2 に自適応 |
+| **🌐 クロスプラットフォーム** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | サイバーギーク / 現代テック風 | 3:4、2.35:1、16:9、5:2 に自適応 |
 | **🌐 クロスプラットフォーム** | `huashu-skills` | [alchaincyf/huashu-skills](https://github.com/alchaincyf/huashu-skills) | 大企業発表会 / インダストリアル | AI 生成 ＋ HTML ベクター描画 |
 | **🌐 クロスプラットフォーム** | `rn-cover-skill` | [Pluviobyte/rnskill](https://github.com/Pluviobyte/rnskill) | 5:2 エディトリアル図解風 | 専門的な技術解説、調査レポート |
 | **📕 縦型 3:4** | `atutun-xhs-cover` | [panggungunvibe/atutun-xhs-cover](https://github.com/panggungunvibe/atutun-xhs-cover) | 人物登場 / 蛍光大見出し / 絵文字 | 個人IP育成、実践ノウハウ共有 |
