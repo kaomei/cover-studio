@@ -22,7 +22,7 @@
 
 ---
 
-## 💡 为什么要做这个「万能封面 Skill」？(Why Cover Studio?)
+## 💡 为什么要做这个「万能封面 Skill」？
 
 作为自媒体创作者、开发者或技术博主，你一定经历过这些**极其痛苦的“封面折磨时刻”**：
 
@@ -41,7 +41,7 @@
 
 ---
 
-## ✨ 核心亮点 (Key Features)
+## ✨ 核心亮点
 
 - ⚙️ **安装即唤醒【万能封面 Skill】**：首次使用时，用户可自主勾选清晰拆分的常驻尺寸清单（小红书 `3:4`、公众号 `2.35:1`、X推文 `16:9`、X长文 `5:2`、视频 `16:9`、GitHub `2:1`、`1:1` 方形等），永久记忆。
 - ✍️ **文字层级先行确认机制**：输入文案后，第一时间与用户精准核对【大字主标题】、【副标题价值点】与【小文字/胶囊标签】，杜绝文字乱码与主次不清。
@@ -55,7 +55,7 @@
 
 ---
 
-## 🛠️ 标准交互全流程图 (Standardized Workflow)
+## 🛠️ 标准交互全流程图
 
 ```mermaid
 flowchart TD
@@ -118,7 +118,7 @@ flowchart LR
 
 ---
 
-## 📋 交互与直出范例 (Example Walkthrough)
+## 📋 交互与直出范例
 
 ### 步骤 0：首次配置与独立尺寸勾选
 > **用户首次安装/唤醒【万能封面 Skill】**：
@@ -154,7 +154,7 @@ flowchart LR
 
 ---
 
-## 📦 安装与使用 (Installation & Quick Start)
+## 📦 安装与使用
 
 ### 1. 安装 Skill 至你的 AI 环境
 
@@ -188,7 +188,7 @@ cp -R skills/cover-studio ~/.gemini/config/skills/cover_studio
 
 ---
 
-## ⚠️ 免责声明与版权提示 (Disclaimer)
+## ⚠️ 免责声明与版权提示
 
 1. **开源集成说明**：本项目（`cover-studio`）为一个开源的封面设计路由与工程规范 Skill，**文中所引用的 9 款开源 Skill 其所有知识产权均归原作者所有**，在此致以崇高敬意。
 2. **非官方合作声明**：本 Skill 与文中所提及的任何自媒体平台（小红书、微信、X、Google Flow 等）均无官方商业合作或代言背书。
@@ -196,7 +196,7 @@ cp -R skills/cover-studio ~/.gemini/config/skills/cover_studio
 
 ---
 
-## 🤝 欢迎贡献 (Contributing)
+## 🤝 欢迎贡献
 
 欢迎提交 Issue 或 Pull Request 推荐更多优质的开源封面引擎、分享爆款排版案例！
 
@@ -204,6 +204,6 @@ cp -R skills/cover-studio ~/.gemini/config/skills/cover_studio
 
 ---
 
-## 📄 开源协议 (License)
+## 📄 开源协议
 
 本项目源码遵循 [MIT License](LICENSE) © 2026 [kaomei](https://github.com/kaomei)。

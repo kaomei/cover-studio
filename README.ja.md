@@ -22,7 +22,7 @@
 
 ---
 
-## 💡 なぜ「万能カバー画像 Skill」を作ったのか？ (開発背景と提供価値)
+## 💡 なぜ「万能カバー画像 Skill」を作ったのか？
 
 クリエイター、個人開発者、テックブロガーなら、誰もが一度は経験したことのある**「カバー画像制作の苦悩」**：
 
@@ -104,7 +104,7 @@ flowchart LR
 
 | 流派 | エンジン名 | GitHub リンク | ビジュアル特徴 | 適用シーン |
 |:---|:---|:---|:---|:---|
-| **🌐 クロスプラットフォーム** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | サイバーギーク / 现代テック風 | 3:4、2.35:1、16:9、5:2 に自適応 |
+| **🌐 クロスプラットフォーム** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | サイバーギーク / 現代テック風 | 3:4、2.35:1、16:9、5:2 に自適応 |
 | **🌐 クロスプラットフォーム** | `huashu-skills` | [alchaincyf/huashu-skills](https://github.com/alchaincyf/huashu-skills) | 大企業発表会 / インダストリアル | AI 生成 ＋ HTML ベクター描画 |
 | **🌐 クロスプラットフォーム** | `rn-cover-skill` | [Pluviobyte/rnskill](https://github.com/Pluviobyte/rnskill) | 5:2 エディトリアル図解風 | 専門的な技術解説、調査レポート |
 | **📕 縦型 3:4** | `atutun-xhs-cover` | [panggungunvibe/atutun-xhs-cover](https://github.com/panggungunvibe/atutun-xhs-cover) | 人物登場 / 蛍光大見出し / 絵文字 | 個人IP育成、実践ノウハウ共有 |
@@ -131,7 +131,7 @@ cp -R skills/cover-studio ~/.gemini/config/skills/cover_studio
 
 ---
 
-## ⚠️ 免責事項 (Disclaimer)
+## ⚠️ 免責事項
 
 1. **オープンソース統合について**：本プロジェクトはカバー画像デザインのルーティングスキルであり、統合されている9つのスキルの知的財産権は各原著作者に帰属します。
 2. **非公式プロジェクト**：各ソーシャルメディアプラットフォームおよび Google との公式な提携関係はありません。

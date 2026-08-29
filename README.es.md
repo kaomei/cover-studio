@@ -22,7 +22,7 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 
 ---
 
-## 💡 ¿Por qué creamos el "Skill Universal de Portadas"? (Historia y Propuesta de Valor)
+## 💡 ¿Por qué creamos el "Skill Universal de Portadas"?
 
 Como creador de contenido, desarrollador independiente o redactor técnico, seguro has vivido estos **dolores de cabeza al diseñar portadas**:
 
@@ -131,7 +131,7 @@ cp -R skills/cover-studio ~/.gemini/config/skills/cover_studio
 
 ---
 
-## ⚠️ Aviso Legal (Disclaimer)
+## ⚠️ Aviso Legal
 
 1. **Atribución de Código Abierto**: Este proyecto es una habilidad de enrutamiento; todos los derechos de autor de los 9 motores pertenecen a sus respectivos autores originales.
 2. **Proyecto No Oficial**: No existe afiliación comercial oficial con las plataformas de redes sociales mencionadas ni con Google.
