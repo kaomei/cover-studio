@@ -38,51 +38,16 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 
 ```mermaid
 flowchart TD
-    classDef setupBox fill:#f0f7ff,stroke:#0284c7,stroke-width:2px,color:#0f172a,rx:10px,ry:10px;
-    classDef textBox fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,rx:10px,ry:10px;
-    classDef genBox fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#78350f,rx:10px,ry:10px;
-    classDef deliverBox fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,rx:10px,ry:10px;
-    classDef decision fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,rx:6px,ry:6px;
-    classDef action fill:#1e293b,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+    classDef default fill:#ffffff,stroke:#e2e8f0,stroke-width:1.5px,color:#1e293b,rx:8px,ry:8px;
+    classDef startNode fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+    classDef stepNode fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a,rx:8px,ry:8px;
+    classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
-    subgraph S0 ["⚙️ Fase 0 · Preferencia Inicial (Única vez)"]
-        A0(["🚀 Iniciar Skill Universal de Portadas"]):::action
-        A1{"Confirmar modo de salida"}:::decision
-        A2["🌟 <b>Lote multiformato de marca unificada</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>Marcar combinación de tamaños deseados：<br/>• 📕 Xiaohongshu 3:4<br/>• 🟢 WeChat 2.35:1<br/>• 🐦 X Post 16:9 / 📰 X Art 5:2<br/>• 🎬 Video 16:9 / 💻 GitHub 2:1 / 🔲 1:1"]:::setupBox
-        A3["🎯 <b>Personalización por tamaño individual</b><br/>Diseño individual para 1 formato"]:::setupBox
-        A0 --> A1
-        A1 -->|"Modo lote"| A2
-        A1 -->|"Modo individual"| A3
-    end
-
-    subgraph S1 ["📝 Fase 1 · Texto y Alineación de Jerarquía"]
-        B0["📋 Ingresar texto / guion / titular"]:::action
-        B1["✍️ <b>Alinear 3 niveles de texto</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>1️⃣ 📌 <b>Titular grande de gancho</b> (≤6-8 palabras)<br/>2️⃣ 📝 <b>Subtítulo de valor</b> (10-15 palabras)<br/>3️⃣ 🏷️ <b>Etiquetas tipo píldora & checklist</b>"]:::textBox
-        B0 --> B1
-    end
-
-    subgraph S2 ["🎨 Fase 2 · Generación Directa de 3 Diseños"]
-        C0["✅ Confirmar configuración de texto"]:::action
-        C1["🖼️ <b>Generar directamente 3 imágenes / prompts</b><br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• <b>Estilo A · Cyber Tech</b> (punk-cover)<br/>• <b>Estilo B · Gancho gran texto</b> (atutun-xhs / ponyo)<br/>• <b>Estilo C · Editorial profundo</b> (knowledge-media)"]:::genBox
-        C0 --> C1
-    end
-
-    subgraph S3 ["🚀 Fase 3 · Elección y Entrega Multiplataforma"]
-        D0{"Usuario elige estilo (A / B / C)"}:::decision
-        D1["📦 <b>Exportar lote de todos los formatos marcados</b><br/>(3:4 + 2.35:1 + 16:9 etc.)"]:::deliverBox
-        D2["🖼️ <b>Exportar tamaño individual seleccionado</b>"]:::deliverBox
-        D3["💻 <b>Render directo en Codex O Guía Google Flow</b>"]:::action
-
-        D0 -->|"Modo multiformato"| D1
-        D0 -->|"Modo individual"| D2
-        D1 ==> D3
-        D2 ==> D3
-    end
-
-    A2 ==> B0
-    A3 ==> B0
-    B1 ==> C0
-    C1 ==> D0
+    A0(["🚀 Iniciar Skill Universal de Portadas"]):::startNode
+    --> A1["<b>0. Configuración Inicial (Única vez)</b><br/>Elegir modo: Lote multiformato (marcar plataformas deseadas) o Modo individual"]:::stepNode
+    --> A2["<b>1. Texto y Alineación de Jerarquía</b><br/>📌 Titular grande (≤8 palabras) ＋ 📝 Subtítulo ＋ 🏷️ Etiquetas píldora"]:::highlightNode
+    --> A3["<b>2. Generación Directa de 3 Diseños</b><br/>Producción simultánea de 【Cyber Tech】·【Gancho Gran Texto】·【Editorial Profundo】"]:::stepNode
+    --> A4["<b>3. Elección ➔ Entrega Lote Multiplataforma</b><br/>Render directo en Codex O Guía gratuita en Google Flow (Nano Banana)"]:::stepNode
 ```
 
 ---

@@ -38,51 +38,16 @@
 
 ```mermaid
 flowchart TD
-    classDef setupBox fill:#f0f7ff,stroke:#0284c7,stroke-width:2px,color:#0f172a,rx:10px,ry:10px;
-    classDef textBox fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,rx:10px,ry:10px;
-    classDef genBox fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#78350f,rx:10px,ry:10px;
-    classDef deliverBox fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,rx:10px,ry:10px;
-    classDef decision fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,rx:6px,ry:6px;
-    classDef action fill:#1e293b,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+    classDef default fill:#ffffff,stroke:#e2e8f0,stroke-width:1.5px,color:#1e293b,rx:8px,ry:8px;
+    classDef startNode fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+    classDef stepNode fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a,rx:8px,ry:8px;
+    classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
-    subgraph S0 ["⚙️ 0단계 · 초기 환경 설정 (최초 1회)"]
-        A0(["🚀 만능 커버 Skill 실행"]):::action
-        A1{"출력 모드 확인"}:::decision
-        A2["🌟 <b>통합 브랜드 멀티 규격 일괄 모드</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>상시 일괄 출력할 독립 규격 체크：<br/>• 📕 샤오홍슈 3:4<br/>• 🟢 위챗 2.35:1<br/>• 🐦 X 포스트 16:9 / 📰 X 아티클 5:2<br/>• 🎬 영상 16:9 / 💻 GitHub 2:1 / 🔲 1:1"]:::setupBox
-        A3["🎯 <b>단일 규격 커스텀 모드</b><br/>매번 지정 규격만 1개씩 단독 생성"]:::setupBox
-        A0 --> A1
-        A1 -->|"일괄 모드"| A2
-        A1 -->|"단일 모드"| A3
-    end
-
-    subgraph S1 ["📝 1단계 · 글 입력 및 텍스트 계층 선행 확인"]
-        B0["📋 글 제목 / 핵심 아웃라인 / 대본 입력"]:::action
-        B1["✍️ <b>3대 텍스트 계층 자동 추출 및 확인</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>1️⃣ 📌 <b>메인 헤드라인</b>: 핵심 후킹 (≤6-8단어)<br/>2️⃣ 📝 <b>서브 카피</b>: 구체적 가치 설명 (10-15단어)<br/>3️⃣ 🏷️ <b>캡슐 태그 & 체크리스트</b>"]:::textBox
-        B0 --> B1
-    end
-
-    subgraph S2 ["🎨 2단계 · 3가지 스타일 즉시 동시 생성"]
-        C0["✅ 텍스트 설정 확인"]:::action
-        C1["🖼️ <b>확인된 텍스트로 3가지 스타일 이미지 즉시 생성</b><br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• <b>스타일 A · 사이버 긱</b> (punk-cover)<br/>• <b>스타일 B · 볼드 헤드라인</b> (atutun-xhs / ponyo)<br/>• <b>스타일 C · 심층 저널</b> (knowledge-media)"]:::genBox
-        C0 --> C1
-    end
-
-    subgraph S3 ["🚀 3단계 · 선택 및 멀티 플랫폼 즉시 납품"]
-        D0{"선호 스타일 선택 (A / B / C)"}:::decision
-        D1["📦 <b>체크한 모든 규격 자산 일괄 생성</b><br/>(3:4 + 2.35:1 + 16:9 등)"]:::deliverBox
-        D2["🖼️ <b>선택한 1개 규격 자산 생성</b>"]:::deliverBox
-        D3["💻 <b>Codex 직접 렌더링 또는 Google Flow 무료 가이드</b>"]:::action
-
-        D0 -->|"멀티 규격 모드"| D1
-        D0 -->|"단일 규격 모드"| D2
-        D1 ==> D3
-        D2 ==> D3
-    end
-
-    A2 ==> B0
-    A3 ==> B0
-    B1 ==> C0
-    C1 ==> D0
+    A0(["🚀 만능 커버 Skill 실행"]):::startNode
+    --> A1["<b>0. 초기 환경 설정 (최초 1회만 확인)</b><br/>출력 모드 선택: 통합 브랜드 멀티 규격 (자율 체크) 또는 단일 규격 커스텀"]:::stepNode
+    --> A2["<b>1. 글 입력 ➔ 텍스트 계층 선행 확인</b><br/>📌 메인 헤드라인 (≤8단어) ＋ 📝 서브 카피 ＋ 🏷️ 캡슐 태그"]:::highlightNode
+    --> A3["<b>2. 3가지 스타일 즉시 생성</b><br/>【사이버 긱】·【볼드 헤드라인】·【심층 저널】3가지 결과물을 즉시 제시"]:::stepNode
+    --> A4["<b>3. 선택 ➔ 자율 규격 일괄 최종 납품</b><br/>Codex 직접 렌더링 또는 Google Flow (Nano Banana) 무료 생성"]:::stepNode
 ```
 
 ---

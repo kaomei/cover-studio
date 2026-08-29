@@ -40,51 +40,16 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 
 ```mermaid
 flowchart TD
-    classDef setupBox fill:#f0f7ff,stroke:#0284c7,stroke-width:2px,color:#0f172a,rx:10px,ry:10px;
-    classDef textBox fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,rx:10px,ry:10px;
-    classDef genBox fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#78350f,rx:10px,ry:10px;
-    classDef deliverBox fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,rx:10px,ry:10px;
-    classDef decision fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,rx:6px,ry:6px;
-    classDef action fill:#1e293b,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+    classDef default fill:#ffffff,stroke:#e2e8f0,stroke-width:1.5px,color:#1e293b,rx:8px,ry:8px;
+    classDef startNode fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+    classDef stepNode fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a,rx:8px,ry:8px;
+    classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
-    subgraph S0 ["⚙️ Phase 0 · Initial Preference Setup (One-time)"]
-        A0(["🚀 Wake Universal Cover Skill"]):::action
-        A1{"Select Output Mode"}:::decision
-        A2["🌟 <b>Unified Brand Batch Mode</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>Select recurring platform ratios:<br/>• 📕 XHS 3:4<br/>• 🟢 WeChat 2.35:1<br/>• 🐦 X Post 16:9 / 📰 X Article 5:2<br/>• 🎬 Video 16:9 / 💻 GitHub 2:1 / 🔲 1:1"]:::setupBox
-        A3["🎯 <b>Single-size Custom Mode</b><br/>Design custom style for 1 specific size each time"]:::setupBox
-        A0 --> A1
-        A1 -->|"Batch Mode"| A2
-        A1 -->|"Single Mode"| A3
-    end
-
-    subgraph S1 ["📝 Phase 1 · Input & Mandatory Text Hierarchy Alignment"]
-        B0["📋 Input Article Title / Outline / Script"]:::action
-        B1["✍️ <b>Align 3 Essential Text Tiers</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>1️⃣ 📌 <b>Main Headline</b>: Core eye-catching hook (≤6-8 words)<br/>2️⃣ 📝 <b>Sub-headline</b>: Concrete value prop (10-15 words)<br/>3️⃣ 🏷️ <b>Pill Badges & Tags</b>: Tags, stickers & checklists"]:::textBox
-        B0 --> B1
-    end
-
-    subgraph S2 ["🎨 Phase 2 · Direct 3-Style Image / Prompt Generation"]
-        C0["✅ Confirm Text Configuration"]:::action
-        C1["🖼️ <b>Directly produce 3 distinct visual streams</b><br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• <b>Style A · Cyber Geek</b> (punk-cover concept)<br/>• <b>Style B · Viral Big-Text</b> (atutun-xhs / ponyo concept)<br/>• <b>Style C · Deep Editorial</b> (knowledge-media concept)"]:::genBox
-        C0 --> C1
-    end
-
-    subgraph S3 ["🚀 Phase 3 · Pick Favorite ➔ Rapid Multi-Ratio Export"]
-        D0{"User Picks Favorite Style (A / B / C)"}:::decision
-        D1["📦 <b>Batch generate all selected ratio assets</b><br/>(XHS 3:4 + WeChat 2.35:1 + X 16:9 etc.)"]:::deliverBox
-        D2["🖼️ <b>Generate single customized ratio asset</b>"]:::deliverBox
-        D3["💻 <b>Codex in-tool direct render</b><br/>or <b>Google Flow (Nano Banana) free fast gen</b>"]:::action
-
-        D0 -->|"Unified Brand Mode"| D1
-        D0 -->|"Single Size Mode"| D2
-        D1 ==> D3
-        D2 ==> D3
-    end
-
-    A2 ==> B0
-    A3 ==> B0
-    B1 ==> C0
-    C1 ==> D0
+    A0(["🚀 Wake Universal Cover Skill"]):::startNode
+    --> A1["<b>0. First-Run Preference (One-time)</b><br/>Select mode: Unified Brand Batch Mode (select platforms) or Single Size Mode"]:::stepNode
+    --> A2["<b>1. Input Article ➔ Mandatory Text Hierarchy Alignment</b><br/>📌 Main Headline (≤8 words) ＋ 📝 Sub-headline ＋ 🏷️ Pill Badges"]:::highlightNode
+    --> A3["<b>2. Direct 3-Style Generation</b><br/>Simultaneously produce 【Cyber Geek】·【Viral Big-Text】·【Deep Editorial】options"]:::stepNode
+    --> A4["<b>3. Pick Favorite ➔ Rapid Batch Multi-Platform Delivery</b><br/>Codex in-tool direct render OR Google Flow (Nano Banana) free fast gen"]:::stepNode
 ```
 
 ---

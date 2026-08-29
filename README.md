@@ -40,51 +40,16 @@
 
 ```mermaid
 flowchart TD
-    classDef setupBox fill:#f0f7ff,stroke:#0284c7,stroke-width:2px,color:#0f172a,rx:10px,ry:10px;
-    classDef textBox fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#064e3b,rx:10px,ry:10px;
-    classDef genBox fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:#78350f,rx:10px,ry:10px;
-    classDef deliverBox fill:#faf5ff,stroke:#9333ea,stroke-width:2px,color:#581c87,rx:10px,ry:10px;
-    classDef decision fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#881337,rx:6px,ry:6px;
-    classDef action fill:#1e293b,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+    classDef default fill:#ffffff,stroke:#e2e8f0,stroke-width:1.5px,color:#1e293b,rx:8px,ry:8px;
+    classDef startNode fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:20px,ry:20px;
+    classDef stepNode fill:#ffffff,stroke:#cbd5e1,stroke-width:1.5px,color:#0f172a,rx:8px,ry:8px;
+    classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
-    subgraph S0 ["⚙️ 阶段 0 · 首次配置偏好 (一次性记忆)"]
-        A0(["🚀 唤醒【万能封面 Skill】"]):::action
-        A1{"选择出图模式"}:::decision
-        A2["🌟 <b>统一品牌多尺寸模式</b><br/>━━━━━━━━━━━━━━━<br/>自主勾选日常常驻画幅：<br/>• 📕 小红书 3:4<br/>• 🟢 微信公众号 2.35:1<br/>• 🐦 X 推文 16:9 / 📰 X 长文 5:2<br/>• 🎬 视频 16:9 / 💻 GitHub 2:1 / 🔲 1:1"]:::setupBox
-        A3["🎯 <b>单尺寸定制模式</b><br/>每次只针对当前指定单一尺寸出图"]:::setupBox
-        A0 --> A1
-        A1 -->|"选定批量"| A2
-        A1 -->|"选定单图"| A3
-    end
-
-    subgraph S1 ["📝 阶段 1 · 文章录入与文字层级核对 (每次必经)"]
-        B0["📋 输入文章标题 / 核心大纲 / 口播文案"]:::action
-        B1["✍️ <b>精准核对 3 大核心文字层级</b><br/>━━━━━━━━━━━━━━━━━━━━━<br/>1️⃣ 📌 <b>大字主标题</b>：核心吸睛痛点 (≤6-8字)<br/>2️⃣ 📝 <b>副标题阐述</b>：具体价值支撑 (10-15字)<br/>3️⃣ 🏷️ <b>小文字与标签</b>：胶囊标签 / 勾选亮点词"]:::textBox
-        B0 --> B1
-    end
-
-    subgraph S2 ["🎨 阶段 2 · 3 大流派直接并行出图 / 出 Prompt"]
-        C0["✅ 确认文字配置"]:::action
-        C1["🖼️ <b>直接并行生成 3 种完全不同流派方案</b><br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• <b>风格 A · 赛博极客流</b> (基于 punk-cover 理念)<br/>• <b>风格 B · 爆款大字流</b> (基于 atutun-xhs / ponyo 理念)<br/>• <b>风格 C · 深度专栏流</b> (基于 knowledge-media 理念)"]:::genBox
-        C0 --> C1
-    end
-
-    subgraph S3 ["🚀 阶段 3 · 选定心仪风格 ➔ 最终多端极速交付"]
-        D0{"用户选定心仪风格 (A / B / C)"}:::decision
-        D1["📦 <b>批量生成全部自选尺寸资产</b><br/>(小红书 3:4 + 公众号 2.35:1 + X 16:9 等)"]:::deliverBox
-        D2["🖼️ <b>生成当前单个画幅专属资产</b>"]:::deliverBox
-        D3["💻 <b>Codex 本地一键直出成图</b><br/>或 <b>Google Flow (Nano Banana) 免费秒级出图</b>"]:::action
-
-        D0 -->|"统一品牌模式"| D1
-        D0 -->|"单尺寸模式"| D2
-        D1 ==> D3
-        D2 ==> D3
-    end
-
-    A2 ==> B0
-    A3 ==> B0
-    B1 ==> C0
-    C1 ==> D0
+    A0(["🚀 唤醒【万能封面 Skill】"]):::startNode
+    --> A1["<b>0. 首次配置 (仅首次问询)</b><br/>确认出图模式：统一品牌多尺寸 (自主勾选常用尺寸) 或 单尺寸定制"]:::stepNode
+    --> A2["<b>1. 文章录入 ➔ 核心文字层级核对</b><br/>📌 大字主标题 (≤8字) ＋ 📝 副标题价值 ＋ 🏷️ 胶囊标签"]:::highlightNode
+    --> A3["<b>2. 3 种风格直接出图 / 出 Prompt</b><br/>直接并行给出【赛博极客】·【爆款大字】·【深度专栏】3 套成图或 Prompt"]:::stepNode
+    --> A4["<b>3. 选定心仪风格 ➔ 批量交付自选尺寸</b><br/>Codex 本地一键直出成图 或 Google Flow (Nano Banana) 免费出图"]:::stepNode
 ```
 
 ---
