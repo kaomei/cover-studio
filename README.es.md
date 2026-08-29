@@ -22,6 +22,25 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 
 ---
 
+## 💡 ¿Por qué creamos el "Skill Universal de Portadas"? (Historia y Propuesta de Valor)
+
+Como creador de contenido, desarrollador independiente o redactor técnico, seguro has vivido estos **dolores de cabeza al diseñar portadas**:
+
+1. **🤯 Fatiga de herramientas y parálisis de elección**: Existen decenas de excelentes skills en GitHub (estilo Cyberpunk, Xiaohongshu, WeChat, Corporativo...). Cada vez que terminas un artículo, pierdes tiempo cambiando de herramienta y adivinando cuál funcionará mejor.
+2. **📐 El "infierno de formatos" multiplataforma**: Deseas publicar en Xiaohongshu (3:4 vertical), WeChat (2.35:1 panorámico), X/Twitter (16:9 post / 5:2 artículo) y YouTube (16:9). El recorte mecánico tradicional corta textos y arruina la composición visual.
+3. **✍️ Caos tipográfico y falta de jerarquía**: Muchas herramientas generan imágenes a ciegas, con textos confusos o titulares sin suficiente impacto visual.
+4. **🎨 Falta de coherencia de marca**: Cambiar de estilo en cada publicación impide que la audiencia reconozca tu identidad de creador.
+
+### 🎯 Nuestra Solución: ¡No reinventar la rueda, sino crear el director de orquesta definitivo!
+> **En lugar de obligarte a instalar y alternar 10 skills fragmentados, Cover Studio actúa como un centro de control inteligente para todas tus portadas.**
+
+- **Integración de 9 motores Open Source top**: Produce simultáneamente 3 opciones de estilos visuales diferenciados según tu contenido.
+- **Alineación previa de jerarquía de texto**: Valida titular grande + subtítulo + etiquetas antes de generar.
+- **Exportación en lote multiformato**: Recompone el diseño para cada plataforma seleccionada sin cortes toscos.
+- **Fijación del Sistema de Marca (Brand System)**: Guarda tu fórmula visual preferida para mantener consistencia a largo plazo.
+
+---
+
 ## ✨ Características Principales
 
 - ⚙️ **Configuración Inicial de Tamaños Diferenciados**: Marca exactamente qué formatos de plataforma necesitas en lote por separado (Xiaohongshu `3:4`, WeChat `2.35:1`, X Post `16:9`, X Artículo `5:2`, Video `16:9`, GitHub `2:1`, Cuadrado `1:1`, etc.).
@@ -87,7 +106,7 @@ flowchart LR
 |:---|:---|:---|:---|:---|
 | **🌐 Multiplataforma** | `punk-cover` | [adrianpunk/Punk-Skill](https://github.com/adrianpunk/Punk-Skill) | Cyberpunk / Tecnología Moderna | Adaptable a 3:4, 2.35:1, 16:9, 5:2 |
 | **🌐 Multiplataforma** | `huashu-skills` | [alchaincyf/huashu-skills](https://github.com/alchaincyf/huashu-skills) | Lanzamiento Empresarial / Diseño Industrial | IA + Renderizado Vectorial HTML |
-| **🌐 Multiplataforma** | `rn-cover-skill` | [Pluviobyte/rnskill](https://github.com/Pluviobyte/rnskill) | Infografía Editorial 5:2 | Análisis técnico, reportes de investigación |
+| **🌐 Multiplataforma** | `rn-cover-skill` | [Pluviobyte/rnskill](https://github.com/Pluviobyte/rnskill) | 5:2 Infografía Editorial | Análisis técnico, reportes de investigación |
 | **📕 Vertical 3:4** | `atutun-xhs-cover` | [panggungunvibe/atutun-xhs-cover](https://github.com/panggungunvibe/atutun-xhs-cover) | Persona Real / Texto Amarillo Neón / Stickers | Marca personal, guías prácticas |
 | **📕 Vertical 3:4** | `gbro-cover-design` | [pyang5166/gbro-cover-design](https://github.com/pyang5166/gbro-cover-design) | Plano Limpio / Tarjetas UI / 10 Diseños | Reseñas de herramientas, software |
 | **📕 Vertical 3:4** | `ponyo-cover-anchor-system` | [ponyodong2026/ponyo-cover-anchor-system](https://github.com/ponyodong2026/ponyo-cover-anchor-system) | Conflicto Emocional / Collage de Papel | Storytelling, ganchos de alto CTR |

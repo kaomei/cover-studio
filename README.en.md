@@ -22,6 +22,25 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 
 ---
 
+## 💡 Why Build "Universal Cover Skill"? (The Story & Value)
+
+As a content creator, indie developer, or tech writer, you've likely faced these **painful cover design moments**:
+
+1. **🤯 Tool Fatigue & Choice Paralysis**: There are dozens of great standalone cover skills on GitHub (Cyberpunk, Xiaohongshu style, WeChat style, Enterprise style...). Every time you finish an article, you waste time switching between tools and guessing which style will click.
+2. **📐 Multi-Platform "Aspect Ratio Hell"**: You want to cross-post to Xiaohongshu (3:4 vertical), WeChat (2.35:1 wide banner), X/Twitter (16:9 post / 5:2 article), and YouTube (16:9). Standard tools just crop a single image, cutting off text, ruining composition, and destroying WeChat's 1:1 center feed thumbnail.
+3. **✍️ Text Chaos & Hierarchy Failure**: Most AI image prompts generate images blindly—either text gets hallucinated, or the headline lacks high-contrast visual hook power.
+4. **🎨 Zero Brand Consistency**: Mixing random visual styles every day prevents your audience from recognizing your unique creator identity.
+
+### 🎯 The Solution: Don't Reinvent the Wheel, Build the Ultimate Conductor!
+> **Instead of forcing you to install and juggle 10 fragmented skills, Cover Studio serves as your intelligent all-in-one cover conductor.**
+
+- **Integrates 9 Top Open-Source Engines**: Curates the best community skills to directly produce 3 distinct artistic stream options.
+- **Pre-Flight Text Hierarchy Alignment**: Aligns Main Headline + Subtitle + Tags before generating a single pixel.
+- **One-Click Multi-Ratio Batch Export**: Re-composes selected artwork across all your chosen platforms without crude cropping.
+- **Brand VI Locking**: Saves your preferred visual formula so every piece of content reinforces your brand.
+
+---
+
 ## ✨ Key Features
 
 - ⚙️ **Discrete Platform Size Bundle Setup**: Select distinct individual platform ratios for recurring batch output (e.g. XHS `3:4`, WeChat `2.35:1`, X Post `16:9`, X Article `5:2`, Video `16:9`, GitHub `2:1`, Square `1:1`).
