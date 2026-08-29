@@ -6,11 +6,11 @@
 
 ### All-in-One Viral Cover Design Workflow · Integrated with 9 Top Open-Source Cover Engines
 
-An open-source AI Skill designed for creators, developers, writers, and tech bloggers. Solves cover choice paralysis! Configures output mode on first install, **first aligns headline & sub-element text hierarchy**, and **directly generates 3 distinct style images or prompts simultaneously**. Supports one-click Brand System locking, **Codex in-tool generation**, and **Nano Banana (Google Flow free platform) prompt delivery**.
+An open-source AI Skill designed for creators, developers, writers, and tech bloggers. Solves cover choice paralysis! Configures your **custom platform size bundle** on first install, **first aligns headline & sub-element text hierarchy**, and **directly generates 3 distinct style images or prompts simultaneously**. Supports one-click Brand System locking, **Codex in-tool generation**, and **Nano Banana (Google Flow free platform) prompt delivery**.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9 Open-Source Engines](https://img.shields.io/badge/Engines-9%20Top%20Open--Source%20Skills-0066ff?style=flat-square)
-![Multi-Platform Ratios](https://img.shields.io/badge/Ratios-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9-f59e0b?style=flat-square)
+![Custom Ratios](https://img.shields.io/badge/Custom%20Ratios-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9-f59e0b?style=flat-square)
 ![Free Image Gen](https://img.shields.io/badge/Generation-Codex%20Direct%20%7C%20Nano%20Banana%20Free-8b5cf6?style=flat-square)
 ![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)
 
@@ -24,11 +24,11 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 
 ## ✨ Key Features
 
-- ⚙️ **First-Run Preference Intake**: Immediately asks whether you prefer batch multi-platform generation (3:4, 2.35:1, 16:9, etc.) or single-size custom styling.
+- ⚙️ **Custom Platform Size Bundle Setup**: Select exactly which platform aspect ratios you need for recurring batch output (e.g. XHS 3:4, WeChat 2.35:1, X 16:9, Video 16:9, GitHub 2:1).
 - ✍️ **Text Hierarchy First Alignment**: Clarifies the exact wording for **Main Headline Hook**, **Sub-headline**, and **Pill Badges / Tags** before generating artwork.
 - 🖼️ **Direct 3-Style Generation**: Directly generates 3 fully rendered images or ready-to-run prompts across distinct visual streams simultaneously.
 - 🏷️ **One-Click Brand System Locking**: Lock your chosen style as your persistent brand VI so readers recognize your content across platforms.
-- 📐 **3 Golden Rules of Re-composition**: Dynamically re-arranges visuals and safe zones for Xiaohongshu (`3:4`), WeChat (`2.35:1`), and X (`16:9` / `5:2`) without arbitrary cropping.
+- 📐 **3 Golden Rules of Re-composition**: Dynamically re-arranges visuals and safe zones for selected aspect ratios without arbitrary cropping.
 - 🚀 **Dual-Path Delivery (Codex Direct + Nano Banana Free)**:
   - **Codex / Local Tool**: Generates high-res image directly in conversation.
   - **Standard Chat**: Outputs structured English prompts tuned for **Nano Banana**, completely free to run on **Google Flow (flow.google)**.
@@ -41,7 +41,8 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 ```mermaid
 flowchart TD
     subgraph S0["⚙️ First-Run Setup (One-time)"]
-        A0[Install / Wake Skill] --> A1[Confirm Output Mode Preference:<br/>1. 🌟 Multi-size Unified Brand Batch Mode<br/>2. 🎯 Single-size Custom Mode]
+        A0[Install / Wake Skill] --> A1[Confirm Output Mode Preference:<br/>• Mode 1: 🌟 Multi-size Unified Brand Batch Mode<br/>• Mode 2: 🎯 Single-size Custom Mode]
+        A1 -->|Mode 1 Chosen| A2[User Checks Desired Aspect Ratio Bundle:<br/>XHS 3:4 / WeChat 2.35:1 / X 16:9 / Video 16:9 / GitHub 2:1]
     end
 
     subgraph S1["📝 Phase 1: Input & Text Hierarchy Alignment"]
@@ -54,7 +55,7 @@ flowchart TD
 
     subgraph S3["🚀 Phase 3: Pick & Multi-Platform Final Delivery"]
         D0[User Picks Favorite (A / B / C)] --> D1{Check Phase 0 Preference}
-        D1 -->|Unified Brand Mode| D2[Batch Export Full Multi-Ratio Assets:<br/>XHS 3:4 + WeChat 2.35:1 + X 16:9/5:2]
+        D1 -->|Unified Brand Mode| D2[Batch Export Full User-Selected Ratios:<br/>e.g. XHS 3:4 + WeChat 2.35:1 + X 16:9]
         D1 -->|Single Size Mode| D3[Export Custom Size Asset]
         D2 --> D4[Codex In-Tool Direct Render OR Free Google Flow Guide]
         D3 --> D4

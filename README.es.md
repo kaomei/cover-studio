@@ -6,11 +6,11 @@
 
 ### Flujo de Trabajo Todo en Uno para Portadas Virales · Integrado con 9 Motores de Código Abierto
 
-Un Skill de IA de código abierto para creadores, desarrolladores y redactores. ¡Elimina la parálisis de elección! Consulta el modo de salida en la instalación, **primero alinea la jerarquía de texto (titular grande + subtítulo + etiquetas)** y luego **genera directamente 3 conceptos de diseño en imagen o prompts simultáneamente**. Soporta fijación de Sistema de Marca (Brand System), **generación directa en Codex** y **prompts optimizados para Nano Banana (Google Flow gratis)**.
+Un Skill de IA de código abierto para creadores, desarrolladores y redactores. ¡Elimina la parálisis de elección! Permite **seleccionar tu combinación personalizada de tamaños** en la instalación, **primero alinea la jerarquía de texto (titular grande + subtítulo + etiquetas)** y luego **genera directamente 3 conceptos de diseño en imagen o prompts simultáneamente**. Soporta fijación de Sistema de Marca (Brand System), **generación directa en Codex** y **prompts optimizados para Nano Banana (Google Flow gratis)**.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9 Motores](https://img.shields.io/badge/Motores-9%20Skills%20Top%20Open--Source-0066ff?style=flat-square)
-![Formatos](https://img.shields.io/badge/Formatos-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9-f59e0b?style=flat-square)
+![Tamaños Personalizados](https://img.shields.io/badge/Tamaños%20Elegidos-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9-f59e0b?style=flat-square)
 ![Generación Gratuita](https://img.shields.io/badge/Generación-Codex%20Directo%20%7C%20Nano%20Banana%20Gratis-8b5cf6?style=flat-square)
 ![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)
 
@@ -24,11 +24,11 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 
 ## ✨ Características Principales
 
-- ⚙️ **Configuración Inicial de Preferencias**: Pregunta si se prefiere salida multiformato en lote (3:4, 2.35:1, 16:9, etc.) o diseño individual por tamaño.
+- ⚙️ **Configuración Inicial de Tamaños Personalizados**: Marca exactamente qué formatos de plataforma necesitas en lote (Xiaohongshu 3:4, WeChat 2.35:1, X 16:9, Video 16:9, GitHub 2:1, etc.).
 - ✍️ **Alineación Previa de Jerarquía de Texto**: Confirma el titular principal grande, subtítulo y etiquetas antes de generar las imágenes.
 - 🖼️ **Generación Directa de 3 Estilos**: Produce 3 opciones completas con la tipografía alineada de forma simultánea.
 - 🏷️ **Fijación de Sistema de Marca (Brand System)**: Guarda tu estilo elegido para mantener coherencia en todas las publicaciones.
-- 📐 **Reorganización Inteligente según Formato**: Reconfigura elementos para `3:4`, `2.35:1` y `16:9` sin cortes arbitrarios.
+- 📐 **Reorganización Inteligente según Formato**: Reconfigura elementos para los formatos elegidos sin cortes arbitrarios.
 - 🚀 **Generación Dual (Directa en Codex + Gratuita en Google Flow)**.
 - 🔄 **Enrutamiento Inteligente entre 9 Motores de Portadas**.
 
@@ -38,8 +38,9 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 
 ```mermaid
 flowchart TD
-    subgraph S0["⚙️ Fase 0: Preferencia Inicial (Única vez)"]
-        A0[Iniciar Skill] --> A1[Confirmar modo de salida:<br/>1. 🌟 Lote multiformato marca unificada<br/>2. 🎯 Personalización por tamaño individual]
+    subgraph S0["⚙️ Fase 0: Preferencia y Selección de Tamaños (Única vez)"]
+        A0[Iniciar Skill] --> A1[Confirmar modo de salida:<br/>• Modo 1: 🌟 Lote multiformato de marca unificada<br/>• Modo 2: 🎯 Personalización por tamaño individual]
+        A1 -->|Si elige Modo 1| A2[Marcar combinación de tamaños deseados:<br/>3:4 / 2.35:1 / 16:9 / Video 16:9 / GitHub 2:1]
     end
 
     subgraph S1["📝 Fase 1: Texto y Alineación de Jerarquía"]
@@ -50,9 +51,9 @@ flowchart TD
         C0[Usuario confirma texto] --> C1[Generar directamente 3 imágenes / prompts:<br/>• Estilo A: Cyber Tech (punk-cover)<br/>• Estilo B: Gancho con gran texto (atutun-xhs / ponyo)<br/>• Estilo C: Editorial profundo (knowledge-media)]
     end
 
-    subgraph S3["🚀 Fase 3: Elección y Entrega Multiplataforma"]
+    subgraph S3["🚀 Fase 3: Elección y Entrega en Tamaños Elegidos"]
         D0[Usuario elige estilo (A / B / C)] --> D1{Ver preferencia de Fase 0}
-        D1 -->|Modo multiformato| D2[Exportar lote completo de formatos:<br/>3:4 + 2.35:1 + 16:9/5:2]
+        D1 -->|Modo multiformato| D2[Exportar lote de todos los formatos marcados:<br/>ej: 3:4 + 2.35:1 + 16:9]
         D1 -->|Modo individual| D3[Exportar tamaño seleccionado]
         D2 --> D4[Render directo en Codex O Guía gratuita en Google Flow]
         D3 --> D4
