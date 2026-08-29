@@ -9,7 +9,7 @@ description: 万能封面工作室 (Cover Studio) - 一站式全平台爆款封�
 
 ---
 
-## 🧭 标准交互全流程图 (Standardized Workflow)
+## 🧭 标准交互全流程图
 
 ```mermaid
 flowchart TD
@@ -19,10 +19,10 @@ flowchart TD
     classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
     A0(["🚀 唤醒【万能封面 Skill】"]):::startNode
-    --> A1["<b>0. 首次配置 (仅首次问询)</b><br/>确认出图模式：统一品牌多尺寸 (自主勾选常用尺寸) 或 单尺寸定制"]:::stepNode
-    --> A2["<b>1. 文章录入 ➔ 核心文字层级核对</b><br/>📌 大字主标题 (≤8字) ＋ 📝 副标题价值 ＋ 🏷️ 胶囊标签"]:::highlightNode
-    --> A3["<b>2. 3 种风格直接出图 / 出 Prompt</b><br/>直接并行给出【赛博极客】·【爆款大字】·【深度专栏】3 套成图或 Prompt"]:::stepNode
-    --> A4["<b>3. 选定心仪风格 ➔ 批量交付自选尺寸</b><br/>Codex 本地一键直出成图 或 Google Flow (Nano Banana) 免费出图"]:::stepNode
+    --> A1["<b>0. 首次配置 (仅首次)</b> ： 确认出图模式（统一品牌多尺寸 / 单尺寸独立定制）"]:::stepNode
+    --> A2["<b>1. 文字核对 (每次必经)</b> ： 精准对齐 📌大字主标题 (≤8字) ＋ 📝副标题 ＋ 🏷️小标签"]:::highlightNode
+    --> A3["<b>2. 3 种风格直接出图</b> ： 并行生成【赛博极客】·【爆款大字】·【深度专栏】3 套成图 / Prompt"]:::stepNode
+    --> A4["<b>3. 选定心仪风格交付</b> ： 批量输出全套自选尺寸 ➔ Codex 本地直出 或 Google Flow 免费出图"]:::stepNode
 ```
 
 ---

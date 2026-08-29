@@ -65,10 +65,10 @@ flowchart TD
     classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
     A0(["🚀 Wake Universal Cover Skill"]):::startNode
-    --> A1["<b>0. First-Run Preference (One-time)</b><br/>Select mode: Unified Brand Batch Mode (select platforms) or Single Size Mode"]:::stepNode
-    --> A2["<b>1. Input Article ➔ Mandatory Text Hierarchy Alignment</b><br/>📌 Main Headline (≤8 words) ＋ 📝 Sub-headline ＋ 🏷️ Pill Badges"]:::highlightNode
-    --> A3["<b>2. Direct 3-Style Generation</b><br/>Simultaneously produce 【Cyber Geek】·【Viral Big-Text】·【Deep Editorial】options"]:::stepNode
-    --> A4["<b>3. Pick Favorite ➔ Rapid Batch Multi-Platform Delivery</b><br/>Codex in-tool direct render OR Google Flow (Nano Banana) free fast gen"]:::stepNode
+    --> A1["<b>0. First-Run Preference</b> : Select Unified Brand Batch Mode (select platforms) or Single Size Mode"]:::stepNode
+    --> A2["<b>1. Text Alignment</b> : Pre-flight check 📌 Main Headline (≤8 words) ＋ 📝 Subtitle ＋ 🏷️ Pill Badges"]:::highlightNode
+    --> A3["<b>2. Direct 3-Style Generation</b> : Simultaneously produce 【Cyber Geek】·【Viral Big-Text】·【Deep Editorial】"]:::stepNode
+    --> A4["<b>3. Rapid Batch Delivery</b> : Export all selected ratios ➔ Codex direct render or Google Flow free generation"]:::stepNode
 ```
 
 ---

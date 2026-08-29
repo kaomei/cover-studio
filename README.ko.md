@@ -63,10 +63,10 @@ flowchart TD
     classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
     A0(["🚀 만능 커버 Skill 실행"]):::startNode
-    --> A1["<b>0. 초기 환경 설정 (최초 1회만 확인)</b><br/>출력 모드 선택: 통합 브랜드 멀티 규격 (자율 체크) 또는 단일 규격 커스텀"]:::stepNode
-    --> A2["<b>1. 글 입력 ➔ 텍스트 계층 선행 확인</b><br/>📌 메인 헤드라인 (≤8단어) ＋ 📝 서브 카피 ＋ 🏷️ 캡슐 태그"]:::highlightNode
-    --> A3["<b>2. 3가지 스타일 즉시 생성</b><br/>【사이버 긱】·【볼드 헤드라인】·【심층 저널】3가지 결과물을 즉시 제시"]:::stepNode
-    --> A4["<b>3. 선택 ➔ 자율 규격 일괄 최종 납품</b><br/>Codex 직접 렌더링 또는 Google Flow (Nano Banana) 무료 생성"]:::stepNode
+    --> A1["<b>0. 초기 환경 설정 (최초 1회)</b> ： 출력 모드 선택 (통합 브랜드 멀티 규격 / 단일 규격 커스텀)"]:::stepNode
+    --> A2["<b>1. 텍스트 계층 선행 확인</b> ： 📌 메인 헤드라인 (≤8단어) ＋ 📝 서브 카피 ＋ 🏷️ 캡슐 태그"]:::highlightNode
+    --> A3["<b>2. 3가지 스타일 즉시 생성</b> ： 【사이버 긱】·【볼드 헤드라인】·【심층 저널】3가지 결과물 즉시 제시"]:::stepNode
+    --> A4["<b>3. 선택 ➔ 자율 규격 일괄 납품</b> ： Codex 직접 렌더링 또는 Google Flow (Nano Banana) 무료 생성"]:::stepNode
 ```
 
 ---

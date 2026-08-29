@@ -63,10 +63,10 @@ flowchart TD
     classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
     A0(["🚀 Iniciar Skill Universal de Portadas"]):::startNode
-    --> A1["<b>0. Configuración Inicial (Única vez)</b><br/>Elegir modo: Lote multiformato (marcar plataformas deseadas) o Modo individual"]:::stepNode
-    --> A2["<b>1. Texto y Alineación de Jerarquía</b><br/>📌 Titular grande (≤8 palabras) ＋ 📝 Subtítulo ＋ 🏷️ Etiquetas píldora"]:::highlightNode
-    --> A3["<b>2. Generación Directa de 3 Diseños</b><br/>Producción simultánea de 【Cyber Tech】·【Gancho Gran Texto】·【Editorial Profundo】"]:::stepNode
-    --> A4["<b>3. Elección ➔ Entrega Lote Multiplataforma</b><br/>Render directo en Codex O Guía gratuita en Google Flow (Nano Banana)"]:::stepNode
+    --> A1["<b>0. Configuración Inicial (Única vez)</b> : Elegir modo (Lote multiformato de plataformas / Modo individual)"]:::stepNode
+    --> A2["<b>1. Texto y Jerarquía</b> : Alinear 📌 Titular grande (≤8 palabras) ＋ 📝 Subtítulo ＋ 🏷️ Etiquetas píldora"]:::highlightNode
+    --> A3["<b>2. Generación Directa de 3 Diseños</b> : Producción simultánea de 【Cyber Tech】·【Gancho Gran Texto】·【Editorial】"]:::stepNode
+    --> A4["<b>3. Elección ➔ Entrega Multiplataforma</b> : Render directo en Codex O Guía gratuita en Google Flow"]:::stepNode
 ```
 
 ---
