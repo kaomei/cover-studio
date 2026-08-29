@@ -6,7 +6,7 @@
 
 ### Flujo de Trabajo Todo en Uno para Portadas Virales · Integrado con 9 Motores de Código Abierto
 
-Un Skill de IA de código abierto para creadores de contenido, desarrolladores independientes y redactores. ¡Elimina la parálisis de elección! Al ingresar tu artículo o guion, Cover Studio **propone simultáneamente 3 conceptos de diseño adaptados**; permite fijar tu Sistema de Marca (Brand System), con soporte de **generación directa en Codex** y **prompts optimizados para Nano Banana (plataforma gratuita Google Flow)**.
+Un Skill de IA de código abierto para creadores, desarrolladores y redactores. ¡Elimina la parálisis de elección! Consulta el modo de salida en la instalación, **propone simultáneamente 3 conceptos de diseño adaptados**, y **alinea obligatoriamente la jerarquía de texto (titular grande + subtítulo + etiquetas)** antes de generar. Soporta fijación de Sistema de Marca (Brand System), **generación directa en Codex** y **prompts optimizados para Nano Banana (Google Flow gratis)**.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9 Motores](https://img.shields.io/badge/Motores-9%20Skills%20Top%20Open--Source-0066ff?style=flat-square)
@@ -24,8 +24,10 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 
 ## ✨ Características Principales
 
-- 🧠 **Propuesta Simultánea de 3 Estilos**: Analiza tu texto y genera 3 conceptos de diseño visual de alto impacto al mismo tiempo.
-- 🏷️ **Fijación de Sistema de Marca (Brand System)**: Guarda tu estilo elegido para mantener la coherencia visual en todas tus publicaciones.
+- ⚙️ **Configuración Inicial de Preferencias**: Pregunta si se prefiere salida multiformato en lote (3:4, 2.35:1, 16:9, etc.) o diseño individual por tamaño.
+- 🧠 **Propuesta Simultánea de 3 Estilos**: Analiza tu texto y genera 3 conceptos de diseño visual al mismo tiempo.
+- ✍️ **Paso Obligatorio de Alineación de Texto**: Confirma el titular principal grande, subtítulo y etiquetas tipo píldora antes de generar la imagen.
+- 🏷️ **Fijación de Sistema de Marca (Brand System)**: Guarda tu estilo elegido para mantener coherencia en todas las publicaciones.
 - 📐 **Reorganización Inteligente según Formato**: Reconfigura elementos para `3:4`, `2.35:1` y `16:9` sin cortes arbitrarios.
 - 🚀 **Generación Dual (Directa en Codex + Gratuita en Google Flow)**.
 - 🔄 **Enrutamiento Inteligente entre 9 Motores de Portadas**.
@@ -48,6 +50,18 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 
 ---
 
+## 🛠️ Flujo de Trabajo Estándar
+
+```mermaid
+flowchart LR
+    A[Fase 0: Preferencia Inicial] --> B[Fase 1: Ingreso de Texto]
+    B --> C[Fase 2: Propuesta de 3 Diseños]
+    C --> D[Fase 3: Elección y Alineación de Texto]
+    D --> E[Fase 4: Render Codex / Prompt Google Flow]
+```
+
+---
+
 ## 📦 Instalación y Uso
 
 ```bash
@@ -65,7 +79,7 @@ cp -R skills/cover-studio ~/.gemini/config/skills/cover_studio
 
 ## ⚠️ Aviso Legal (Disclaimer)
 
-1. **Atribución de Código Abierto**: Este proyecto es una habilidad de enrutamiento de flujos de trabajo; todos los derechos de autor de los 9 motores pertenecen a sus respectivos autores originales.
+1. **Atribución de Código Abierto**: Este proyecto es una habilidad de enrutamiento; todos los derechos de autor de los 9 motores pertenecen a sus respectivos autores originales.
 2. **Proyecto No Oficial**: No existe afiliación comercial oficial con las plataformas de redes sociales mencionadas ni con Google.
 3. **Uso Permitido**: Para fines educativos, de investigación y creación legítima de contenido.
 

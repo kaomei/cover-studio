@@ -6,7 +6,7 @@
 
 ### All-in-One Viral Cover Design Workflow · Integrated with 9 Top Open-Source Cover Engines
 
-An open-source AI Skill designed for creators, independent developers, newsletter writers, and tech bloggers. Solves cover choice paralysis and visual inconsistency! Input your article or script, and Cover Studio **simultaneously proposes 3 tailored layout options**; supports one-click Brand System locking, plus **Codex in-tool generation** and **Nano Banana (Google Flow free platform) prompt delivery**.
+An open-source AI Skill designed for creators, developers, writers, and tech bloggers. Solves cover choice paralysis! Clarifies output mode on first install, **simultaneously proposes 3 tailored layout options** upon article input, and **mandatorily aligns headline & sub-element text hierarchy** before generation. Supports one-click Brand System locking, **Codex in-tool generation**, and **Nano Banana (Google Flow free platform) prompt delivery**.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9 Open-Source Engines](https://img.shields.io/badge/Engines-9%20Top%20Open--Source%20Skills-0066ff?style=flat-square)
@@ -24,7 +24,9 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 
 ## ✨ Key Features
 
+- ⚙️ **First-Run Preference Intake**: Immediately asks whether you prefer batch multi-platform generation (3:4, 2.35:1, 16:9, etc.) or single-size custom styling.
 - 🧠 **Simultaneous 3-Style Proposal**: Analyzes your content and recommends 3 distinct, high-converting layout concepts at once.
+- ✍️ **Mandatory Text Hierarchy Alignment**: Every run confirms exact wording for **Main Headline**, **Sub-headline**, and **Pill Badges / Tags** before rendering.
 - 🏷️ **One-Click Brand System Locking**: Lock your chosen style as your persistent brand VI so readers recognize your content across platforms.
 - 📐 **3 Golden Rules of Re-composition**: Dynamically re-arranges visuals and safe zones for Xiaohongshu (`3:4`), WeChat (`2.35:1`), and X (`16:9` / `5:2`) without arbitrary cropping.
 - 🚀 **Dual-Path Delivery (Codex Direct + Nano Banana Free)**:
@@ -35,24 +37,6 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 ---
 
 ## 📚 4 Major Streams & 9 Integrated Engines Matrix
-
-```mermaid
-mindmap
-  root((Cover Studio))
-    Cross-Platform Universal
-      punk-cover [Cyberpunk/Tech Geek·3-Ratio Adaptive]
-      huashu-skills [Enterprise Launch/Industrial·AI+HTML Dual Path]
-      rn-cover-skill [5:2 Editorial Infographic·Serious Knowledge]
-    Xiaohongshu 3:4 Viral
-      atutun-xhs-cover [Presenter+Neon Yellow Text+Emoji]
-      gbro-cover-design [Clean Flat+UI Card+10 Layouts]
-      ponyo-cover-anchor-system [Emotional Anchor+Pain-Point Hook+Collage]
-    WeChat 2.35:1 Brand
-      knowledge-media-cover [Ivory Paper+Crimson Tag+1:1 Crop Safe]
-      wechatcover [Art Direction Typography+Brand VI Rules]
-    Video & Tutorial Stream
-      oil-cover [Apple Minimalist+Mac Window+Screen Evidence]
-```
 
 | Stream | Engine Name | GitHub Repo | Visual Characteristics | Best Suited For |
 |:---|:---|:---|:---|:---|
@@ -68,13 +52,14 @@ mindmap
 
 ---
 
-## 🛠️ Creation Workflow
+## 🛠️ Standard Workflow
 
 ```mermaid
 flowchart LR
-    A[1. Input Article / Draft] --> B[2. Studio Proposes 3 Concepts]
-    B --> C[3. Confirm Pick & Lock Brand System]
-    C --> D[4. Codex Direct Gen / Free Google Flow Gen]
+    A[Stage 0: First-Run Output Preference] --> B[Stage 1: Input Article / Draft]
+    B --> C[Stage 2: Propose 3 Distinct Concepts]
+    C --> D[Stage 3: Pick & Mandatory Text Alignment]
+    D --> E[Stage 4: Codex Direct Gen / Free Google Flow Gen]
 ```
 
 ---

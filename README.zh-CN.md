@@ -6,7 +6,7 @@
 
 ### 一站式全平台爆款封面选型与生成工作流 · 集成 9 大顶级开源封面引擎
 
-一款专为自媒体创作者、独立开发者、专栏作家与科技博主打造的开源 AI Skill。告别封面选择困难症与风格大乱炖！输入文章或口播文案，**自动并行输出 3 种最匹配的风格排版方案**；支持一键固化个人品牌系统（Brand System），支持 **Codex 环境直接出图** 与 **Nano Banana (Google Flow 免费平台) 提示词** 双路径交付。
+一款专为自媒体创作者、独立开发者、专栏作家与科技博主打造的开源 AI Skill。告别封面选择困难症与风格大乱炖！安装即问出图偏好，输入文章内容**自动并行输出 3 种最匹配的风格排版方案**；强制核对**大字主标题与小文字标签层级**；支持一键固化个人品牌系统（Brand System），支持 **Codex 环境直接出图** 与 **Nano Banana (Google Flow 免费平台) 提示词** 双路径交付。
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9大开源引擎](https://img.shields.io/badge/集成引擎-9大顶级开源封面Skill-0066ff?style=flat-square)
@@ -24,7 +24,9 @@
 
 ## ✨ 核心亮点 (Key Features)
 
+- ⚙️ **安装即问出图模式**：首次使用即确认偏好——是“选定风格后一次性批量出多平台多尺寸（小红书3:4、公众号2.35:1、X 16:9/5:2 等）”，还是“单尺寸独立定制”。
 - 🧠 **三方案并行推荐**：输入文章内容后，自动从知识图谱与风格库中同时提炼 3 组截然不同的高契合度排版方案，拒绝单选题盲猜。
+- ✍️ **文字层级强制核对机制**：选定方案后，每次严格与用户对齐【大字主标题】、【副标题阐述】与【小文字/胶囊标签元素】，确保信息层级清晰、主次分明。
 - 🏷️ **品牌系统一键固化 (Brand System)**：用户选定方案后，可一键将其保存为个人专属品牌 VI，让未来全年的封面“不看作者名就知道是你”。
 - 📐 **三大黄金铁律画幅重排**：严格依据小红书（`3:4`）、公众号（`2.35:1`）、X（`16:9` / `5:2`）进行视觉动线重排，杜绝机械裁剪。
 - 🚀 **直出生图 + Nano Banana 免费双路径**：
@@ -68,23 +70,25 @@ mindmap
 
 ---
 
-## 🛠️ 创作工作流 (Workflow)
+## 🛠️ 标准创作工作流 (Workflow)
 
 ```mermaid
 flowchart LR
-    A[1. 粘贴文章/标题草稿] --> B[2. Skill 并行输出 3 种排版方案]
-    B --> C[3. 确认心仪方案 & 询问品牌固化偏好]
-    C --> D[4. Codex 直出生图 / Nano Banana 免费出图]
+    A[阶段 0: 首次配置出图模式偏好] --> B[阶段 1: 输入文章/草稿]
+    B --> C[阶段 2: 并行推荐 3 种方案]
+    C --> D[阶段 3: 选定方案 & 强制核对文字层级]
+    D --> E[阶段 4: Codex 直出 / Google Flow 免费出图]
 ```
 
-1. **输入文案**：在对话中粘贴你的文章标题、提纲或完整口播。
-2. **三方案并行**：Cover Studio 自动完成语义拆解，输出 3 种截然不同的构图与 Prompt 方案。
-3. **品牌固化与选型**：选定方案后，确认是“一次性批量输出全平台多尺寸并固化为品牌标准”，还是“单平台单次出图”。
-4. **极速出图**：Codex 环境一键直出成品图，或复制 Prompt 到 Google Flow 平台使用 Nano Banana 免费出图。
+1. **首次偏好确认**：首次使用时，确认常用模式（统一品牌多尺寸分发 vs 单尺寸定制）。
+2. **输入文案**：在对话中粘贴你的文章标题、提纲或完整口播。
+3. **三方案并行**：Cover Studio 自动完成语义拆解，输出 3 种截然不同的构图与 Prompt 方案。
+4. **文字层级精准对齐**：选定方案后，核对【大字主标题】、【副标题】与【小标签】，支持一键微调。
+5. **极速出图**：Codex 环境一键直出成品图，或复制 Prompt 到 Google Flow 平台使用 Nano Banana 免费出图。
 
 ---
 
-## 📋 提示词生成范例 (Example Proposals)
+## 📋 提示词生成与文字对齐范例 (Example Alignment)
 
 ### 案例：文章《AI 时代，个人超级个体的商业闭环与搞钱指南》
 
@@ -95,19 +99,25 @@ flowchart LR
 【方案 1：赛博极客风（基于 punk-cover 理念）】
 📐 画幅：16:9（X / 即刻）
 💡 构图：深灰网格背景上悬浮发光的 3D 算力芯片与金色齿轮，左侧排版无衬线大标题
-📝 Prompt: High-end editorial tech cover illustration, aspect ratio 16:9, clean off-white background with subtle circuit grid, glowing cyan and electric purple accents...
+📝 Prompt: High-end editorial tech cover illustration, aspect ratio 16:9, clean off-white background with subtle circuit grid...
 
 ---
 【方案 2：小红书爆款大字风（基于 atutun-xhs 理念）】
 📐 画幅：3:4（小红书竖版）
 💡 构图：顶部亮黄色高对比度标题卡片「普通人翻盘」+ Q版人物手托发光钱袋 + 勾选框
-📝 Prompt: Viral Xiaohongshu style lifestyle & knowledge guide cover, vertical 3:4, bright warm lighting, large bold typographic hook area with high-contrast text cards...
+📝 Prompt: Viral Xiaohongshu style lifestyle & knowledge guide cover, vertical 3:4, bright warm lighting...
 
 ---
 【方案 3：微信公众号深度长文风（基于 knowledge-media 理念）】
 📐 画幅：2.35:1（公众号横幅）
 💡 构图：暖象牙纸质底色 #F7F5EE，暗红分类标签「深度商业」，居中抽象商业飞轮插画
-📝 Prompt: Sophisticated editorial publication header banner, ultra-wide 2.35:1, warm fine ivory paper texture background #F7F5EE...
+📝 Prompt: Sophisticated editorial publication header banner, ultra-wide 2.35:1, warm fine ivory paper texture background...
+
+--------------------------------------------------
+【文字层级核对环节】（用户选择方案 2 后触发）
+1. 📌 大字主标题：普通人翻盘
+2. 📝 副标题：AI 时代个人商业闭环与实操指南
+3. 🏷️ 小标签元素：[实操干货] · ✔ 0门槛 · ✔ 附 Prompt
 ```
 
 ---
