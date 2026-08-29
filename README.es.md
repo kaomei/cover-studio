@@ -39,32 +39,58 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 ```mermaid
 flowchart TD
     subgraph S0["⚙️ Fase 0: Preferencia y Selección de Tamaños (Única vez)"]
-        A0[Iniciar Skill Universal de Portadas] --> A1[Confirmar modo de salida:<br/>• Modo 1: 🌟 Lote multiformato de marca unificada<br/>• Modo 2: 🎯 Personalización por tamaño individual]
-        A1 -->|Si elige Modo 1| A2[Marcar combinación de tamaños deseados:<br/>3:4 / 2.35:1 / X 16:9 / X Art 5:2 / Video 16:9 / GitHub 2:1 / 1:1]
+        A0["Iniciar Skill Universal de Portadas"] --> A1{"Confirmar modo de salida"}
+        A1 -->|"Modo multiformato"| A2["Marcar combinación de tamaños deseados:<br/>3:4 / 2.35:1 / X 16:9 / X Art 5:2 / Video 16:9 / GitHub 2:1 / 1:1"]
+        A1 -->|"Modo individual"| A3["Personalización por tamaño individual"]
     end
 
     subgraph S1["📝 Fase 1: Texto y Alineación de Jerarquía"]
-        B0[Ingresar texto / guion] --> B1[Extraer y alinear 3 niveles de texto:<br/>1. 📌 Titular grande de gancho<br/>2. 📝 Subtítulo de propuesta de valor<br/>3. 🏷️ Etiquetas tipo píldora]
+        B0["Ingresar texto / guion"] --> B1["Extraer y alinear 3 niveles de texto:<br/>1. 📌 Titular grande de gancho<br/>2. 📝 Subtítulo de propuesta de valor<br/>3. 🏷️ Etiquetas tipo píldora"]
     end
 
     subgraph S2["🎨 Fase 2: Generación Directa de 3 Diseños"]
-        C0[Usuario confirma texto] --> C1[Generar directamente 3 imágenes / prompts:<br/>• Estilo A: Cyber Tech (punk-cover)<br/>• Estilo B: Gancho con gran texto (atutun-xhs / ponyo)<br/>• Estilo C: Editorial profundo (knowledge-media)]
+        C0["Usuario confirma texto"] --> C1["Generar directamente 3 imágenes / prompts:<br/>• Estilo A: Cyber Tech (punk-cover)<br/>• Estilo B: Gancho con gran texto (atutun-xhs / ponyo)<br/>• Estilo C: Editorial profundo (knowledge-media)"]
     end
 
     subgraph S3["🚀 Fase 3: Elección y Entrega en Tamaños Elegidos"]
-        D0[Usuario elige estilo (A / B / C)] --> D1{Ver preferencia de Fase 0}
-        D1 -->|Modo multiformato| D2[Exportar lote de todos los formatos marcados:<br/>ej: 3:4 + 2.35:1 + 16:9]
-        D1 -->|Modo individual| D3[Exportar tamaño seleccionado]
-        D2 --> D4[Render directo en Codex O Guía gratuita en Google Flow]
+        D0["Usuario elige estilo (A / B / C)"] --> D1{"Ver preferencia de Fase 0"}
+        D1 -->|"Modo multiformato"| D2["Exportar lote de todos los formatos marcados:<br/>ej: 3:4 + 2.35:1 + 16:9"]
+        D1 -->|"Modo individual"| D3["Exportar tamaño seleccionado"]
+        D2 --> D4["Render directo en Codex O Guía gratuita en Google Flow"]
         D3 --> D4
     end
 
-    S0 --> S1 --> S2 --> S3
+    A2 --> B0
+    A3 --> B0
+    B1 --> C0
+    C1 --> D0
 ```
 
 ---
 
 ## 📚 Matriz de 4 Corrientes y 9 Motores Integrados
+
+```mermaid
+flowchart LR
+    CS["🎨 Cover Studio<br/>Estudio Universal de Portadas"]
+    
+    CS --> S1["🌐 Multiplataforma Universal"]
+    S1 --> E1["punk-cover (Cyberpunk / Tecnología / Multiformato)"]
+    S1 --> E2["huashu-skills (Lanzamiento / Industrial / IA+HTML)"]
+    S1 --> E3["rn-cover-skill (5:2 Infografía Editorial / Seriedad)"]
+
+    CS --> S2["📕 Xiaohongshu 3:4 Viral"]
+    S2 --> E4["atutun-xhs-cover (Persona Real / Texto Neón / Stickers)"]
+    S2 --> E5["gbro-cover-design (Plano Limpio / Tarjetas UI / 10 Diseños)"]
+    S2 --> E6["ponyo-cover-anchor-system (Anclaje Emocional / Collage)"]
+
+    CS --> S3["🟢 WeChat 2.35:1 Exclusivo"]
+    S3 --> E7["knowledge-media-cover (Papel Marfil / Etiqueta Roja / 1:1 Seguro)"]
+    S3 --> E8["wechatcover (Tipografía Art Director / Sin deformación)"]
+
+    CS --> S4["🎬 Video y Tutoriales"]
+    S4 --> E9["oil-cover (Apple Minimal / Ventana Mac / Keyframes)"]
+```
 
 | Corriente | Nombre del Motor | Repositorio GitHub | Características Visuales | Uso Recomendado |
 |:---|:---|:---|:---|:---|

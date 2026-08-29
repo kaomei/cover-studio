@@ -41,32 +41,58 @@ Ideal for: **Xiaohongshu viral notes, WeChat Official Account headers, X/Twitter
 ```mermaid
 flowchart TD
     subgraph S0["⚙️ First-Run Setup (One-time)"]
-        A0[Install / Wake Universal Cover Skill] --> A1[Confirm Output Mode Preference:<br/>• Mode 1: 🌟 Multi-size Unified Brand Batch Mode<br/>• Mode 2: 🎯 Single-size Custom Mode]
-        A1 -->|Mode 1 Chosen| A2[User Checks Discrete Aspect Ratio Options:<br/>XHS 3:4 / WeChat 2.35:1 / X Post 16:9 / X Article 5:2 / Video 16:9 / GitHub 2:1 / 1:1]
+        A0["Install / Wake Universal Cover Skill"] --> A1{"Confirm Output Mode Preference"}
+        A1 -->|"Multi-size Mode"| A2["User Checks Discrete Aspect Ratio Options:<br/>XHS 3:4 / WeChat 2.35:1 / X Post 16:9 / X Article 5:2 / Video 16:9 / GitHub 2:1 / 1:1"]
+        A1 -->|"Single-size Mode"| A3["Custom design for single platform each time"]
     end
 
     subgraph S1["📝 Phase 1: Input & Text Hierarchy Alignment"]
-        B0[Input Article / Title / Script] --> B1[Skill Extracts & Aligns 3 Text Tiers:<br/>1. 📌 Main Headline Hook<br/>2. 📝 Sub-headline Value Prop<br/>3. 🏷️ Pill Badges & Checklist Tags]
+        B0["Input Article / Title / Script"] --> B1["Skill Extracts & Aligns 3 Text Tiers:<br/>1. 📌 Main Headline Hook<br/>2. 📝 Sub-headline Value Prop<br/>3. 🏷️ Pill Badges & Checklist Tags"]
     end
 
     subgraph S2["🎨 Phase 2: Direct 3-Style Image / Prompt Generation"]
-        C0[User Confirms Text] --> C1[Directly Produce 3 Distinct Results / Prompts:<br/>• Style A: Cyber Tech / Geek (punk-cover)<br/>• Style B: Viral Big-Text Hook (atutun-xhs / ponyo)<br/>• Style C: Deep Editorial (knowledge-media)]
+        C0["User Confirms Text"] --> C1["Directly Produce 3 Distinct Results / Prompts:<br/>• Style A: Cyber Tech / Geek (punk-cover)<br/>• Style B: Viral Big-Text Hook (atutun-xhs / ponyo)<br/>• Style C: Deep Editorial (knowledge-media)"]
     end
 
     subgraph S3["🚀 Phase 3: Pick & Multi-Platform Final Delivery"]
-        D0[User Picks Favorite (A / B / C)] --> D1{Check Phase 0 Preference}
-        D1 -->|Unified Brand Mode| D2[Batch Export Full User-Selected Ratios:<br/>e.g. XHS 3:4 + WeChat 2.35:1 + X 16:9]
-        D1 -->|Single Size Mode| D3[Export Custom Size Asset]
-        D2 --> D4[Codex In-Tool Direct Render OR Free Google Flow Guide]
+        D0["User Picks Favorite (A / B / C)"] --> D1{"Check Phase 0 Preference"}
+        D1 -->|"Multi-size Mode"| D2["Batch Export Full User-Selected Ratios:<br/>e.g. XHS 3:4 + WeChat 2.35:1 + X 16:9"]
+        D1 -->|"Single-size Mode"| D3["Export Custom Size Asset"]
+        D2 --> D4["Codex In-Tool Direct Render OR Free Google Flow Guide"]
         D3 --> D4
     end
 
-    S0 --> S1 --> S2 --> S3
+    A2 --> B0
+    A3 --> B0
+    B1 --> C0
+    C1 --> D0
 ```
 
 ---
 
 ## 📚 4 Major Streams & 9 Integrated Engines Matrix
+
+```mermaid
+flowchart LR
+    CS["🎨 Cover Studio<br/>Universal Cover Workflow"]
+    
+    CS --> S1["🌐 Cross-Platform Universal"]
+    S1 --> E1["punk-cover (Cyberpunk / Modern Tech / Multi-Ratio)"]
+    S1 --> E2["huashu-skills (Enterprise Launch / Industrial / AI+HTML)"]
+    S1 --> E3["rn-cover-skill (5:2 Editorial Infographic / Bold Typography)"]
+
+    CS --> S2["📕 Xiaohongshu 3:4 Viral"]
+    S2 --> E4["atutun-xhs-cover (Presenter / Neon Bold Text / Emoji)"]
+    S2 --> E5["gbro-cover-design (Clean Flat / UI Cards / 10 Layouts)"]
+    S2 --> E6["ponyo-cover-anchor-system (Emotional Anchor / Hooks / Collage)"]
+
+    CS --> S3["🟢 WeChat 2.35:1 Brand"]
+    S3 --> E7["knowledge-media-cover (Ivory Paper / Crimson Tag / 1:1 Safe)"]
+    S3 --> E8["wechatcover (Art Direction Typography / Brand Rules)"]
+
+    CS --> S4["🎬 Video & Tutorial Stream"]
+    S4 --> E9["oil-cover (Apple Minimalist / Mac Window / Keyframes)"]
+```
 
 | Stream | Engine Name | GitHub Repo | Visual Characteristics | Best Suited For |
 |:---|:---|:---|:---|:---|

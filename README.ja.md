@@ -39,32 +39,58 @@
 ```mermaid
 flowchart TD
     subgraph S0["⚙️ 初期設定 (初回のみ)"]
-        A0[万能カバー画像 Skill 起動] --> A1[出力モード確認:<br/>• モード 1: 🌟 ブランド統一マルチサイズ一括出力<br/>• モード 2: 🎯 単一サイズ個別カスタム]
-        A1 -->|モード 1 選択時| A2[出力したい独立サイズをチェック:<br/>3:4 / 2.35:1 / X 16:9 / X長文 5:2 / 動画 16:9 / GitHub 2:1 / 1:1]
+        A0["万能カバー画像 Skill 起動"] --> A1{"出力モード確認"}
+        A1 -->|"マルチサイズモード"| A2["出力したい独立サイズをチェック:<br/>3:4 / 2.35:1 / X 16:9 / X長文 5:2 / 動画 16:9 / GitHub 2:1 / 1:1"]
+        A1 -->|"単一サイズモード"| A3["毎回単一サイズを個別カスタム"]
     end
 
     subgraph S1["📝 フェーズ1: 記事入力と文字階層確認"]
-        B0[記事・原稿を入力] --> B1[3大文字階層を自動抽出して確認:<br/>1. 📌 大見出しフック<br/>2. 📝 副見出し価値説明<br/>3. 🏷️ 補足タグ・バッジ]
+        B0["記事・原稿を入力"] --> B1["3大文字階層を自動抽出して確認:<br/>1. 📌 大見出しフック<br/>2. 📝 副見出し価値説明<br/>3. 🏷️ 補足タグ・バッジ"]
     end
 
     subgraph S2["🎨 フェーズ2: 3スタイル直接生成"]
-        C0[ユーザーが文字を確認] --> C1[確認された文字で3つのスタイル画像を直接生成:<br/>• スタイル A: サイバーギーク (punk-cover)<br/>• スタイル B: バズる大見出し (atutun-xhs / ponyo)<br/>• スタイル C: 深度コラム (knowledge-media)]
+        C0["ユーザーが文字を確認"] --> C1["確認された文字で3つのスタイル画像を直接生成:<br/>• スタイル A: サイバーギーク (punk-cover)<br/>• スタイル B: バズる大見出し (atutun-xhs / ponyo)<br/>• スタイル C: 深度コラム (knowledge-media)"]
     end
 
     subgraph S3["🚀 フェーズ3: 選択＆最終納品"]
-        D0[ユーザーが好みのスタイルを選択] --> D1{フェーズ0の初期設定}
-        D1 -->|マルチサイズモード| D2[チェックした全サイズを一括出力:<br/>例: 3:4 + 2.35:1 + 16:9]
-        D1 -->|単一サイズモード| D3[指定サイズを出力]
-        D2 --> D4[Codex直接生成 または Google Flow無料ガイド]
+        D0["ユーザーが好みのスタイルを選択"] --> D1{"フェーズ0の初期設定"}
+        D1 -->|"マルチサイズモード"| D2["チェックした全サイズを一括出力:<br/>例: 3:4 + 2.35:1 + 16:9"]
+        D1 -->|"単一サイズモード"| D3["指定サイズを出力"]
+        D2 --> D4["Codex直接生成 または Google Flow無料ガイド"]
         D3 --> D4
     end
 
-    S0 --> S1 --> S2 --> S3
+    A2 --> B0
+    A3 --> B0
+    B1 --> C0
+    C1 --> D0
 ```
 
 ---
 
 ## 📚 4大流派 · 9大オープンソースエンジン
+
+```mermaid
+flowchart LR
+    CS["🎨 Cover Studio<br/>万能カバー画像工作室"]
+    
+    CS --> S1["🌐 クロスプラットフォーム全能流"]
+    S1 --> E1["punk-cover (サイバーギーク / 現代テック / 多サイズ自適応)"]
+    S1 --> E2["huashu-skills (大企業発表会 / インダストリアル / AI+HTML)"]
+    S1 --> E3["rn-cover-skill (5:2 エディトリアル図解風 / 厳格な知識感)"]
+
+    CS --> S2["📕 小紅書 3:4 縦型バズ流"]
+    S2 --> E4["atutun-xhs-cover (人物登場 / 蛍光大見出し / 絵文字)"]
+    S2 --> E5["gbro-cover-design (フラット単色 / UIカード / 10種構図)"]
+    S2 --> E6["ponyo-cover-anchor-system (感情フック / 痛点 / コラージュ)"]
+
+    CS --> S3["🟢 WeChat 2.35:1 専門流"]
+    S3 --> E7["knowledge-media-cover (アイボリー紙 / 暗赤タグ / 1:1 安全区)"]
+    S3 --> E8["wechatcover (アートディレクション文字組 / 崩れない)"]
+
+    CS --> S4["🎬 動画・実演ツール流"]
+    S4 --> E9["oil-cover (Apple極簡 / Macウィンドウ / キーフレーム)"]
+```
 
 | 流派 | エンジン名 | GitHub リンク | ビジュアル特徴 | 適用シーン |
 |:---|:---|:---|:---|:---|
@@ -75,7 +101,7 @@ flowchart TD
 | **📕 縦型 3:4** | `gbro-cover-design` | [pyang5166/gbro-cover-design](https://github.com/pyang5166/gbro-cover-design) | フラット単色 / UI カード構図 | ツールレビュー、ソフトウェア解説 |
 | **📕 縦型 3:4** | `ponyo-cover-anchor-system` | [ponyodong2026/ponyo-cover-anchor-system](https://github.com/ponyodong2026/ponyo-cover-anchor-system) | 感情フック / コラージュ風 | コラム、高クリック率フック |
 | **🟢 横長 2.35:1** | `knowledge-media-cover` | [aa1143/knowledge-media-cover](https://github.com/aa1143/knowledge-media-cover) | アイボリー紙テクスチャ / 抽象概念 | 深度コラム（1:1 正方形クロップ対応） |
-| **🟢 横長 2.35:1** | `wechatcover` | [naplesblue/wechatcover](https://github.com/naplesblue/wechatcover) | アートディレクション級文字組 | 企業ニュースレター、ブランド統一 |
+| **🟢 横长 2.35:1** | `wechatcover` | [naplesblue/wechatcover](https://github.com/naplesblue/wechatcover) | アートディレクション級文字組 | 企業ニュースレター、ブランド統一 |
 | **🎬 動画・実演** | `oil-cover` | [oil-oil/oil-cover](https://github.com/oil-oil/oil-cover) | Apple風ミニマル / Macウィンドウ | プログラミング実演、AI ツール動画 |
 
 ---
