@@ -6,7 +6,7 @@
 
 ### Flujo de Trabajo Todo en Uno para Portadas Virales · Integrado con 9 Motores de Código Abierto
 
-Un Skill de IA de código abierto para creadores, desarrolladores y redactores. ¡Elimina la parálisis de elección! Consulta el modo de salida en la instalación, **propone simultáneamente 3 conceptos de diseño adaptados**, y **alinea obligatoriamente la jerarquía de texto (titular grande + subtítulo + etiquetas)** antes de generar. Soporta fijación de Sistema de Marca (Brand System), **generación directa en Codex** y **prompts optimizados para Nano Banana (Google Flow gratis)**.
+Un Skill de IA de código abierto para creadores, desarrolladores y redactores. ¡Elimina la parálisis de elección! Consulta el modo de salida en la instalación, **primero alinea la jerarquía de texto (titular grande + subtítulo + etiquetas)** y luego **genera directamente 3 conceptos de diseño en imagen o prompts simultáneamente**. Soporta fijación de Sistema de Marca (Brand System), **generación directa en Codex** y **prompts optimizados para Nano Banana (Google Flow gratis)**.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9 Motores](https://img.shields.io/badge/Motores-9%20Skills%20Top%20Open--Source-0066ff?style=flat-square)
@@ -25,12 +25,41 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 ## ✨ Características Principales
 
 - ⚙️ **Configuración Inicial de Preferencias**: Pregunta si se prefiere salida multiformato en lote (3:4, 2.35:1, 16:9, etc.) o diseño individual por tamaño.
-- 🧠 **Propuesta Simultánea de 3 Estilos**: Analiza tu texto y genera 3 conceptos de diseño visual al mismo tiempo.
-- ✍️ **Paso Obligatorio de Alineación de Texto**: Confirma el titular principal grande, subtítulo y etiquetas tipo píldora antes de generar la imagen.
+- ✍️ **Alineación Previa de Jerarquía de Texto**: Confirma el titular principal grande, subtítulo y etiquetas antes de generar las imágenes.
+- 🖼️ **Generación Directa de 3 Estilos**: Produce 3 opciones completas con la tipografía alineada de forma simultánea.
 - 🏷️ **Fijación de Sistema de Marca (Brand System)**: Guarda tu estilo elegido para mantener coherencia en todas las publicaciones.
 - 📐 **Reorganización Inteligente según Formato**: Reconfigura elementos para `3:4`, `2.35:1` y `16:9` sin cortes arbitrarios.
 - 🚀 **Generación Dual (Directa en Codex + Gratuita en Google Flow)**.
 - 🔄 **Enrutamiento Inteligente entre 9 Motores de Portadas**.
+
+---
+
+## 🛠️ Flujo de Trabajo Estándar
+
+```mermaid
+flowchart TD
+    subgraph S0["⚙️ Fase 0: Preferencia Inicial (Única vez)"]
+        A0[Iniciar Skill] --> A1[Confirmar modo de salida:<br/>1. 🌟 Lote multiformato marca unificada<br/>2. 🎯 Personalización por tamaño individual]
+    end
+
+    subgraph S1["📝 Fase 1: Texto y Alineación de Jerarquía"]
+        B0[Ingresar texto / guion] --> B1[Extraer y alinear 3 niveles de texto:<br/>1. 📌 Titular grande de gancho<br/>2. 📝 Subtítulo de propuesta de valor<br/>3. 🏷️ Etiquetas tipo píldora]
+    end
+
+    subgraph S2["🎨 Fase 2: Generación Directa de 3 Diseños"]
+        C0[Usuario confirma texto] --> C1[Generar directamente 3 imágenes / prompts:<br/>• Estilo A: Cyber Tech (punk-cover)<br/>• Estilo B: Gancho con gran texto (atutun-xhs / ponyo)<br/>• Estilo C: Editorial profundo (knowledge-media)]
+    end
+
+    subgraph S3["🚀 Fase 3: Elección y Entrega Multiplataforma"]
+        D0[Usuario elige estilo (A / B / C)] --> D1{Ver preferencia de Fase 0}
+        D1 -->|Modo multiformato| D2[Exportar lote completo de formatos:<br/>3:4 + 2.35:1 + 16:9/5:2]
+        D1 -->|Modo individual| D3[Exportar tamaño seleccionado]
+        D2 --> D4[Render directo en Codex O Guía gratuita en Google Flow]
+        D3 --> D4
+    end
+
+    S0 --> S1 --> S2 --> S3
+```
 
 ---
 
@@ -47,18 +76,6 @@ Ideal para: **Notas virales de Xiaohongshu, cabeceras de WeChat, artículos de X
 | **🟢 Horizontal 2.35:1** | `knowledge-media-cover` | [aa1143/knowledge-media-cover](https://github.com/aa1143/knowledge-media-cover) | Papel Marfil / Metáfora Central | Artículos extensos (seguro para recorte 1:1) |
 | **🟢 Horizontal 2.35:1** | `wechatcover` | [naplesblue/wechatcover](https://github.com/naplesblue/wechatcover) | Tipografía de Dirección de Arte | Boletines corporativos, identidad de marca |
 | **🎬 Video y Tutoriales** | `oil-cover` | [oil-oil/oil-cover](https://github.com/oil-oil/oil-cover) | Minimalismo Apple / Ventana Mac | Grabaciones de código, tutoriales de IA |
-
----
-
-## 🛠️ Flujo de Trabajo Estándar
-
-```mermaid
-flowchart LR
-    A[Fase 0: Preferencia Inicial] --> B[Fase 1: Ingreso de Texto]
-    B --> C[Fase 2: Propuesta de 3 Diseños]
-    C --> D[Fase 3: Elección y Alineación de Texto]
-    D --> E[Fase 4: Render Codex / Prompt Google Flow]
-```
 
 ---
 
