@@ -6,11 +6,11 @@
 
 ### Flujo de Trabajo Todo en Uno para Portadas Virales · Integrado con 9 Motores de Código Abierto
 
-Un Skill de IA de código abierto para creadores, desarrolladores y redactores. ¡Elimina la parálisis de elección! Permite **seleccionar tu lista de tamaños individuales bien diferenciados** en la instalación del Skill Universal de Portadas, **primero alinea la jerarquía de texto (titular grande + subtítulo + etiquetas)** y luego **genera directamente 3 conceptos de diseño en imagen o prompts simultáneamente**. Soporta fijación de Sistema de Marca (Brand System), **generación directa en Codex** y **prompts optimizados para Nano Banana (Google Flow gratis)**.
+Un Skill de IA de código abierto para creadores, desarrolladores y redactores. ¡Elimina la parálisis de elección! Al ingresar un artículo, **primero alinea la jerarquía de texto (titular grande + subtítulo + etiquetas)** y luego **genera directamente 3 conceptos de diseño en imagen o prompts simultáneamente**. Una vez que eliges tu estilo favorito, **selecciona libremente los formatos de plataforma para exportar en lote** y fijar tu Sistema de Marca (Brand System). Soporta **generación directa en Codex** y **prompts optimizados para Nano Banana (Google Flow gratis)**.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9 Motores](https://img.shields.io/badge/Motores-9%20Skills%20Top%20Open--Source-0066ff?style=flat-square)
-![Formatos Claros](https://img.shields.io/badge/Tamaños%20Elegidos-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9%20%7C%205%3A2-f59e0b?style=flat-square)
+![Formatos en Lote](https://img.shields.io/badge/Formatos-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9%20%7C%205%3A2-f59e0b?style=flat-square)
 ![Generación Gratuita](https://img.shields.io/badge/Generación-Codex%20Directo%20%7C%20Nano%20Banana%20Gratis-8b5cf6?style=flat-square)
 ![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)
 
@@ -36,18 +36,17 @@ Como creador de contenido, desarrollador independiente o redactor técnico, segu
 
 - **Integración de 9 motores Open Source top**: Produce simultáneamente 3 opciones de estilos visuales diferenciados según tu contenido.
 - **Alineación previa de jerarquía de texto**: Valida titular grande + subtítulo + etiquetas antes de generar.
-- **Exportación en lote multiformato**: Recompone el diseño para cada plataforma seleccionada sin cortes toscos.
+- **3 estilos primero, luego exportación multiformato en lote**: Mira el resultado real, elige el ganador y exporta todas las plataformas.
 - **Fijación del Sistema de Marca (Brand System)**: Guarda tu fórmula visual preferida para mantener consistencia a largo plazo.
 
 ---
 
 ## ✨ Características Principales
 
-- ⚙️ **Configuración Inicial de Tamaños Diferenciados**: Marca exactamente qué formatos de plataforma necesitas en lote por separado (Xiaohongshu `3:4`, WeChat `2.35:1`, X Post `16:9`, X Artículo `5:2`, Video `16:9`, GitHub `2:1`, Cuadrado `1:1`, etc.).
 - ✍️ **Alineación Previa de Jerarquía de Texto**: Confirma el titular principal grande, subtítulo y etiquetas antes de generar las imágenes.
 - 🖼️ **Generación Directa de 3 Estilos**: Produce 3 opciones completas con la tipografía alineada de forma simultánea.
+- 📐 **Elegir Estilo y luego Expandir a Múltiples Formatos**: Selecciona tu estilo preferido y marca las plataformas deseadas (Xiaohongshu `3:4`, WeChat `2.35:1`, X Post `16:9`, X Artículo `5:2`, Video `16:9`, etc.) para entrega en lote.
 - 🏷️ **Fijación de Sistema de Marca (Brand System)**: Guarda tu estilo elegido para mantener coherencia en todas las publicaciones.
-- 📐 **Reorganización Inteligente según Formato**: Reconfigura elementos para los formatos elegidos sin cortes arbitrarios.
 - 🚀 **Generación Dual (Directa en Codex + Gratuita en Google Flow)**.
 - 🔄 **Enrutamiento Inteligente entre 9 Motores de Portadas**.
 
@@ -63,10 +62,10 @@ flowchart TD
     classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
     A0(["🚀 Iniciar Skill Universal de Portadas"]):::startNode
-    --> A1["<b>0. Configuración Inicial (Única vez)</b> : Elegir modo (Lote multiformato de plataformas / Modo individual)"]:::stepNode
-    --> A2["<b>1. Texto y Jerarquía</b> : Alinear 📌 Titular grande (≤8 palabras) ＋ 📝 Subtítulo ＋ 🏷️ Etiquetas píldora"]:::highlightNode
-    --> A3["<b>2. Generación Directa de 3 Diseños</b> : Producción simultánea de 【Cyber Tech】·【Gancho Gran Texto】·【Editorial】"]:::stepNode
-    --> A4["<b>3. Elección ➔ Entrega Multiplataforma</b> : Render directo en Codex O Guía gratuita en Google Flow"]:::stepNode
+    --> A1["<b>1. Texto y Jerarquía</b> ： Alinear 📌 Titular grande (≤8 palabras) ＋ 📝 Subtítulo ＋ 🏷️ Etiquetas píldora"]:::highlightNode
+    --> A2["<b>2. Generación Directa de 3 Diseños</b> ： Producción simultánea de 【Cyber Tech】·【Gancho Gran Texto】·【Editorial】"]:::stepNode
+    --> A3["<b>3. Elegir Estilo ➔ Marcar Formatos</b> ： Confirmar diseño (A/B/C) ➔ Marcar formatos para generar en lote"]:::highlightNode
+    --> A4["<b>4. Entrega en Lote ＋ Fijar Marca</b> ： Render directo en Codex O Guía gratuita en Google Flow"]:::stepNode
 ```
 
 ---

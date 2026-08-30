@@ -6,11 +6,11 @@
 
 ### All-in-One Viral Cover Design Workflow · Integrated with 9 Top Open-Source Cover Engines
 
-An open-source AI Skill designed for creators, developers, writers, and tech bloggers. Solves cover choice paralysis! Configures your **clearly separated platform size bundle** upon installing Universal Cover Skill, **first aligns headline & sub-element text hierarchy**, and **directly generates 3 distinct style images or prompts simultaneously**. Supports one-click Brand System locking, **Codex in-tool generation**, and **Nano Banana (Google Flow free platform) prompt delivery**.
+An open-source AI Skill designed for creators, developers, writers, and tech bloggers. Solves cover choice paralysis! Input your article to **first align headline & sub-element text hierarchy**, and **directly generate 3 distinct style images or prompts simultaneously**. Once you pick your favorite, **freely select multi-platform ratios for instant batch export** and lock your Brand System. Supports **Codex in-tool generation** and **Nano Banana (Google Flow free platform) prompt delivery**.
 
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827?style=flat-square)
 ![9 Open-Source Engines](https://img.shields.io/badge/Engines-9%20Top%20Open--Source%20Skills-0066ff?style=flat-square)
-![Discrete Ratios](https://img.shields.io/badge/Ratios-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9%20%7C%205%3A2-f59e0b?style=flat-square)
+![Multi-Platform Ratios](https://img.shields.io/badge/Ratios-3%3A4%20%7C%202.35%3A1%20%7C%2016%3A9%20%7C%205%3A2-f59e0b?style=flat-square)
 ![Free Image Gen](https://img.shields.io/badge/Generation-Codex%20Direct%20%7C%20Nano%20Banana%20Free-8b5cf6?style=flat-square)
 ![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)
 
@@ -36,18 +36,17 @@ As a content creator, indie developer, or tech writer, you've likely faced these
 
 - **Integrates 9 Top Open-Source Engines**: Curates the best community skills to directly produce 3 distinct artistic stream options.
 - **Pre-Flight Text Hierarchy Alignment**: Aligns Main Headline + Subtitle + Tags before generating a single pixel.
-- **One-Click Multi-Ratio Batch Export**: Re-composes selected artwork across all your chosen platforms without crude cropping.
+- **3 Styles First, Then Batch Multi-Ratio Export**: See actual results first, pick the winner, then export all needed platform formats.
 - **Brand VI Locking**: Saves your preferred visual formula so every piece of content reinforces your brand.
 
 ---
 
 ## ✨ Key Features
 
-- ⚙️ **Discrete Platform Size Bundle Setup**: Select distinct individual platform ratios for recurring batch output (e.g. XHS `3:4`, WeChat `2.35:1`, X Post `16:9`, X Article `5:2`, Video `16:9`, GitHub `2:1`, Square `1:1`).
 - ✍️ **Text Hierarchy First Alignment**: Clarifies the exact wording for **Main Headline Hook**, **Sub-headline**, and **Pill Badges / Tags** before generating artwork.
 - 🖼️ **Direct 3-Style Generation**: Directly generates 3 fully rendered images or ready-to-run prompts across distinct visual streams simultaneously.
+- 📐 **Pick First, Then Expand to Multi-Ratios**: Select your preferred style, then check the target platforms (XHS `3:4`, WeChat `2.35:1`, X Post `16:9`, X Article `5:2`, Video `16:9`, etc.) for seamless batch delivery.
 - 🏷️ **One-Click Brand System Locking**: Lock your chosen style as your persistent brand VI so readers recognize your content across platforms.
-- 📐 **3 Golden Rules of Re-composition**: Dynamically re-arranges visuals and safe zones for selected aspect ratios without arbitrary cropping.
 - 🚀 **Dual-Path Delivery (Codex Direct + Nano Banana Free)**:
   - **Codex / Local Tool**: Generates high-res image directly in conversation.
   - **Standard Chat**: Outputs structured English prompts tuned for **Nano Banana**, completely free to run on **Google Flow (flow.google)**.
@@ -65,10 +64,10 @@ flowchart TD
     classDef highlightNode fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#1e40af,font-weight:bold,rx:8px,ry:8px;
 
     A0(["🚀 Wake Universal Cover Skill"]):::startNode
-    --> A1["<b>0. First-Run Preference</b> : Select Unified Brand Batch Mode (select platforms) or Single Size Mode"]:::stepNode
-    --> A2["<b>1. Text Alignment</b> : Pre-flight check 📌 Main Headline (≤8 words) ＋ 📝 Subtitle ＋ 🏷️ Pill Badges"]:::highlightNode
-    --> A3["<b>2. Direct 3-Style Generation</b> : Simultaneously produce 【Cyber Geek】·【Viral Big-Text】·【Deep Editorial】"]:::stepNode
-    --> A4["<b>3. Rapid Batch Delivery</b> : Export all selected ratios ➔ Codex direct render or Google Flow free generation"]:::stepNode
+    --> A1["<b>1. Input Article ➔ Mandatory Text Hierarchy Alignment</b> ： Pre-flight check 📌 Main Headline (≤8 words) ＋ 📝 Subtitle ＋ 🏷️ Pill Badges"]:::highlightNode
+    --> A2["<b>2. Direct 3-Style Generation</b> ： Simultaneously produce 【Cyber Geek】·【Viral Big-Text】·【Deep Editorial】options"]:::stepNode
+    --> A3["<b>3. Pick Favorite ➔ Select Output Ratios</b> ： Confirm style (A/B/C) ➔ Check platforms to batch generate (XHS/WeChat/X/etc.)"]:::highlightNode
+    --> A4["<b>4. Batch Delivery ＋ Brand VI Locking</b> ： Export all selected ratios ➔ Codex direct render or Google Flow free generation"]:::stepNode
 ```
 
 ---
